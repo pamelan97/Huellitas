@@ -32,10 +32,17 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
+<<<<<<< Updated upstream
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => 'aaa',
         'database' => 'Huellitas',
+=======
+        'hostname' => 'huellitas_mariadb_1',
+        'username' => 'tesis',
+        'password' => 't12345',
+        'database' => 'bitnami_myapp',
+>>>>>>> Stashed changes
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
