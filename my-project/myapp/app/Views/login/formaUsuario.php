@@ -28,7 +28,7 @@
     </p>
     <?php }else{ ?>
     <p>
-        <a href="<?php echo site_url('/login-login/')?>">LogIn</a>
+        <a href="<?php echo site_url('/LoginLogOutController/login02Validar')?>">LogIn</a>
     </p>
     <?php } ?>
 

@@ -1,7 +1,7 @@
 <?php 
 namespace App\Models;
 use CodeIgniter\Model;
-use App\Models\UsuarioEntity;
+use App\Entities\UsuarioEntity;
 class UsuarioModel extends Model
 {
     protected $table = 'usuarios';
