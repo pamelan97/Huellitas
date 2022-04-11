@@ -3,7 +3,7 @@
 
 <?= $this->section('contenido') ?>
   <div class="container mt-5">
-    <form method="post" id="add_create" name="add_create" action="<?= site_url('/registro-agregar-continuar') ?>">
+    <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroCrud/agregar02Continuar') ?>">
       <div class="form-group">
         <label>correo</label>
         <input type="text" name="correo" class="form-control"/>

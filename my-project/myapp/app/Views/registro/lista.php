@@ -3,7 +3,7 @@
 <?= $this->section('contenido') ?>
 
 <div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/registro-agregar') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
+        <a href="<?php echo site_url('/registroCrud/agregar01formulario') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
 	</div>
 
 <div class="mt-3">
@@ -35,9 +35,9 @@
              <td><?php echo $reg->correo; ?></td>
              <td><?php echo $reg->clave; ?></td>
              <td>
-              <a href="<?php echo site_url('/registro-ver/'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
-              <a href="<?php echo site_url('/registro-editar/'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
-              <a href="<?php echo site_url('/registro-eliminar/'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
+              <a href="<?php echo site_url('/registroCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
+              <a href="<?php echo site_url('/registroCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
+              <a href="<?php echo site_url('/registroCrud/eliminar01Formulario'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
               </td>
           </tr>
          <?php endforeach; ?>
