@@ -6,7 +6,7 @@
           <?php foreach($registros as $reg): ?>
             <li>
                 <a href="<?php echo site_url('/LoginLogOutController/login02Validar'.$reg->id);?>">
-                    <?php echo $reg->usuario_correo; ?>
+                    <?php echo $reg->correo; ?>
                 </a>    
             </li>     
          <?php endforeach; ?>

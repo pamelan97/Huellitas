@@ -9,6 +9,6 @@
 
 </head>
 <body>
-	<h1>Pido datos</h1>
+	<h1>Pedir datos</h1>
      Guardarcambios <a href="/base-editar-continuar"> Ver </a> <br/>
 </body>

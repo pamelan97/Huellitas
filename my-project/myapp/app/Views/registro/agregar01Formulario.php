@@ -34,7 +34,7 @@
         messages: {
           correo: {
             required: "El correo es obligatorio",
-            maxlength: "El correo a lo más es de 100 caracteres.",
+            maxlength: "El correo a lo maximo de 100 caracteres.",
           },
           clave: {
             required: "La contraseña es obligatoria",

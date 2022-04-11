@@ -17,3 +17,73 @@ CRITICAL - 2022-04-11 11:28:47 --> Argument 1 passed to App\Models\UsuarioModel:
 #3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+ERROR - 2022-04-11 13:33:43 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-04-11 13:33:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 /app/myapp/app/Models/registroModel.php(64): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/app/Controllers/RegistroCrud.php(15): App\Models\registroModel->todEs()
+#6 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroCrud->index()
+#7 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-11 13:35:26 --> Error connecting to the database: php_network_getaddresses: getaddrinfo failed: Name or service not known
+CRITICAL - 2022-04-11 13:35:26 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Name or service not known
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 /app/myapp/app/Models/UsuarioModel.php(31): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/app/Controllers/LoginLogOutController.php(21): App\Models\UsuarioModel->todos()
+#6 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#7 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-11 13:37:40 --> Error connecting to the database: php_network_getaddresses: getaddrinfo failed: Name or service not known
+CRITICAL - 2022-04-11 13:37:40 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Name or service not known
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 /app/myapp/app/Models/UsuarioModel.php(31): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/app/Controllers/LoginLogOutController.php(21): App\Models\UsuarioModel->todos()
+#6 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#7 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-11 14:17:36 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-04-11 14:17:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 /app/myapp/app/Models/UsuarioModel.php(31): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/app/Controllers/LoginLogOutController.php(21): App\Models\UsuarioModel->todos()
+#6 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#7 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-11 14:25:10 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-04-11 14:25:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 /app/myapp/app/Models/UsuarioModel.php(31): CodeIgniter\BaseModel->findAll()
+#5 /app/myapp/app/Controllers/LoginLogOutController.php(21): App\Models\UsuarioModel->todos()
+#6 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#7 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}

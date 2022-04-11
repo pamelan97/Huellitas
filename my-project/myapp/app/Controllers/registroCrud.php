@@ -13,7 +13,7 @@ public function index(){
     $mod = new registroModel();
     // Buscamos los conciertos
     $usuarios = $mod->todEs();
-    // UN EJEMPLO PARA MASA ADELANTE
+    // UN EJEMPLO PARA MAS ADELANTE
     //$conciertos = $mod->soloConA();
     
     // Ponemos en la 'data transiente' la data que queremos mostrar
