@@ -52,7 +52,7 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 
 
 
-$routes->add('registro', 'LoginLogOutController::index');
+$routes->add('registro', 'registroCrud::agregar01Formulario');
 $routes->add('login', 'LoginLogOutController::login01Formulario');
 $routes->add('login-login01Validar/(:num)', 'LoginLogOutController::login02Validar/$1');
 $routes->add('login-logout', 'LoginLogOutController::logout');
