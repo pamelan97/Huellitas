@@ -1,10 +1,12 @@
 <?= $this->extend('formaStandar') ?>
 <?= $this->section('contenido') ?>
 <div>
-		<h1> Bienvenido a huellitas</h1>
+		<h1 class="text-center"> Bienvenido a huellitas</h1>
 			<ul>
-				<li><a href="<?php echo site_url('/registro-lista/') ?>">Registrarse en huellitas</a> </li>
-				<li><a href="<?php echo site_url('#') ?>">Ingresar a huellitas</a> </li>
+			<div class="text-center"><br>
+				<a href="<?php echo site_url('/registroCrud/agregar01Formulario') ?>" class="btn btn-success mb-2">Registrarse</a><br>
+				<a href="<?php echo site_url('/login/') ?>" class="btn btn-success mb-2">Iniciar Sesion</a>
+			</div>
 			</ul>
 </div>
 <?= $this->endSection() ?>

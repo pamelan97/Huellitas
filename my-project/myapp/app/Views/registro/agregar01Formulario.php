@@ -13,7 +13,7 @@
         <input type="text" name="clave" class="form-control"/>
       </div>
       <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-sm">Agregar</button>
+      <button type="submit" class="btn btn-primary btn-sm">Registrarse</button>
       <a href="<?php echo site_url('/registro-cancelar/');?>" class="btn btn-secondary btn-sm">Cancelar</a>
       </div>
     </form>
