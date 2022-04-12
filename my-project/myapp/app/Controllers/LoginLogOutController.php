@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UsuarioModel;
+use CodeIgniter\Throttle\ThrottlerInterface;
 
 class LoginLogOutController extends BaseController
 {
@@ -17,16 +18,17 @@ class LoginLogOutController extends BaseController
 
         // Por mientras
         // ** Lista de usaurios desde la BD
-        $model = new UsuarioModel();
-        $usuarios = $model->todos();
-        $data['registros'] = $usuarios;
-        return view('login/login01Formulario',$data);
+        
+        return view('login/login01Formulario');
     }
 
-    public function login02Validar($pk)
+    public function login02Validar()
     {
-        // Como swbe funcioanr
-        // ** Recueprar los datos 
+        // Como debe funcioanr
+        // ** Recueprar los datos
+        $unCorreo = $_POST["el_correo"];
+        $unaClave = $_POST["la_clave"];
+        
         // ** Buscar el usr en la bd (existe?)
         // ** Valdiar que la passw del usr esta ok 
         // ==> Guardar en la sesion
@@ -37,12 +39,19 @@ class LoginLogOutController extends BaseController
         // Dejamos el USR en Session ()        
         // ** Buscamos el usuario
         $model = new UsuarioModel();
-        $usuario = $model->unUsuario($pk);
-        // Lo poenmos en sesion
-        session_start();
-        $_SESSION['USR']= $usuario;
-        // Pal Home!!!
-        return $this->index();
+        $usuario = $model->usuarioPorCorreo($unCorreo);
+
+        if (sizeof($usuario) ==1 ) {
+            session_start();
+            $_SESSION['USR']= $usuario[0];
+            return $this->index();
+    
+        }
+        else{
+            return $this->login01Formulario();  
+        }
+        
+           
     }
 
     public function logout(){

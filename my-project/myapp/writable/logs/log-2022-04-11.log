@@ -87,3 +87,41 @@ Main connection [MySQLi]: Connection refused
 #8 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #9 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #10 {main}
+CRITICAL - 2022-04-11 20:21:08 --> View themes, no current section.
+#0 /app/myapp/app/Views/login/login01Formulario.php(47): CodeIgniter\View\View->endSection()
+#1 /app/myapp/system/View/View.php(210): include('/app/myapp/app/...')
+#2 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /app/myapp/app/Controllers/LoginLogOutController.php(23): view()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-11 20:40:14 --> syntax error, unexpected 'as' (T_AS), expecting ')'
+#0 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /app/myapp/app/Controllers/LoginLogOutController.php(23): view()
+#3 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login01Formulario()
+#4 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-11 21:16:03 --> Call to a member function sizeof() on array
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-11 21:16:11 --> Call to a member function sizeof() on array
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-11 21:16:23 --> Call to a member function sizeof() on array
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
