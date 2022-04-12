@@ -24,11 +24,11 @@
     ?>
     <p>
         <b><?php echo $usr->usuario_correo?></b>
-        <a href="<?php echo site_url('/login-logout/')?>">LogOut</a>
+        <a href="<?php echo site_url('/login-logout/')?>">Cerrar Sesión</a>
     </p>
     <?php }else{ ?>
     <p>
-        <a href="<?php echo site_url('/login-login/')?>">LogIn</a>
+        <a href="<?php echo site_url('/login')?>">Acceder</a>
     </p>
     <?php } ?>
 

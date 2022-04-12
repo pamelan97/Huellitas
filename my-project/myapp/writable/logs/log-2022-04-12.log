@@ -1,0 +1,2 @@
+ERROR - 2022-04-12 00:01:59 --> Column 'usuario_correo' cannot be null
+ERROR - 2022-04-12 00:04:23 --> Column 'usuario_correo' cannot be null

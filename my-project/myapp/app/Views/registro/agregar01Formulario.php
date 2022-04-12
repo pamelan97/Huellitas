@@ -2,19 +2,21 @@
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
+
   <div class="container mt-5">
+  <h1>Registro de usuario</h1>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroCrud/agregar02Continuar') ?>">
       <div class="form-group">
-        <label>correo</label>
-        <input type="text" name="correo" class="form-control"/>
+        <label>Ingrese su correo electrónico</label>
+        <input type="text" name="correo" class="form-control" required/>
       </div>
       <div class="form-group">
-        <label>clave</label>
-        <input type="text" name="clave" class="form-control"/>
+        <label>Cree una contraseña:</label>
+        <input type="password" name="clave" class="form-control" required/>
       </div>
       <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-sm">Registrarse</button>
-      <a href="<?php echo site_url('/registro-cancelar/');?>" class="btn btn-secondary btn-sm">Cancelar</a>
+      <button type="submit" class="btn btn-primary btn-sm">REGISTRARSE</button>
+      <a href="<?php echo site_url('######');?>" class="btn btn-secondary btn-sm">Cancelar</a>
       </div>
     </form>
   </div>

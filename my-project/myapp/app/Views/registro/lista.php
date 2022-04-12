@@ -1,9 +1,23 @@
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
+<div class="container center text-center">
+<form method="post" id="add_create" name="add_create" action="<?= site_url('/login') ?>">
+<h1>Registro exitoso, ahora puedes ingresar a tu cuenta</h1>
+<button type="submit" class="btn btn-primary btn-sm">Ingresar a mi cuenta</button>
+</form>
+</div>
 
+
+
+
+
+
+
+
+<!--
 <div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/registroCrud/agregar01formulario') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
+    <a href="<?php echo site_url('/registroCrud/agregar01formulario') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
 	</div>
 
 <div class="mt-3">
@@ -53,4 +67,4 @@
 </script>
 
 <?= $this->endSection() ?>
- 
+-->
