@@ -7,7 +7,7 @@
     <form method="post" id="add_create" name="add_create" action="<?= site_url('login-login01Validar/') ?>">
       <div class="form-group">
         <label>Ingrese su correo electrónico:</label>
-        <input type="text" name="el_correo" class="form-control" required/>
+        <input type="mail" name="el_correo" class="form-control" required/>
       </div>
       <div class="form-group">
         <label>Ingresa tu contraseña:</label>

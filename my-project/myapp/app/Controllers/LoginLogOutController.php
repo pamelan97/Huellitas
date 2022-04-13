@@ -40,15 +40,20 @@ class LoginLogOutController extends BaseController
         // ** Buscamos el usuario
         $model = new UsuarioModel();
         $usuario = $model->usuarioPorCorreo($unCorreo);
+        // **$clave = $model->usuarioPorclave($unaClave);
 
         if (sizeof($usuario) ==1 ) {
             session_start();
             $_SESSION['USR']= $usuario[0];
+         // **   $_SESSION['USR']= $clave[0];
             return $this->index();
     
         }
         else{
+           
+            echo "Disculpe, no esta registrado con nosotros";
             return $this->login01Formulario();  
+            
         }
         
            
@@ -62,3 +67,4 @@ class LoginLogOutController extends BaseController
     }
 
 }
+

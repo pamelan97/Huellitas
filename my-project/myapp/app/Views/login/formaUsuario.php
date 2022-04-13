@@ -28,7 +28,7 @@
     </p>
     <?php }else{ ?>
     <p>
-        <a href="<?php echo site_url('/login')?>">Acceder</a>
+        <a href="<?php echo site_url('/login')?>"></a>
     </p>
     <?php } ?>
 
