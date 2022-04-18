@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 //
 use App\Models\registroModel;
 use App\Entities\Registro;
+use App\Models\UsuarioModel;
 //
 class registroCrud extends Controller
 {
@@ -44,7 +45,15 @@ public function agregar01Formulario(){
 }
 
 public function agregar02Continuar(){
-    // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
+    
+    
+    $model = new UsuarioModel();
+    $unCorreo = $this->request->getVar('correo');
+        $usuario = $model->usuarioPorCorreo($unCorreo);
+        // **$clave = $model->usuarioPorclave($unaClave);
+
+        if (sizeof($usuario) !=1 ) {
+             // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new registro();
     $unRegistro->correo =  $this->request->getVar('correo');
     $unRegistro->clave =  $this->request->getVar('clave');
@@ -54,6 +63,17 @@ public function agregar02Continuar(){
     $mod->save($unRegistro);
     //
     return $this->index();
+    
+        }
+        else{
+           
+            echo "Disculpe, ya esta registrado";
+            return view('registro/agregar01Formulario'); 
+           
+            
+        }
+    
+   
 }
 
 public function editar01Formulario($id){

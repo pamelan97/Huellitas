@@ -39,7 +39,7 @@ class LoginLogOutController extends BaseController
         // Dejamos el USR en Session ()        
         // ** Buscamos el usuario
         $model = new UsuarioModel();
-        $usuario = $model->usuarioPorCorreo($unCorreo);
+        $usuario = $model->usuarioPorCorreo($unCorreo,$unaClave);
         // **$clave = $model->usuarioPorclave($unaClave);
 
         if (sizeof($usuario) ==1 ) {

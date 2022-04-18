@@ -76,7 +76,7 @@ p.lead {
 }
 
 .source {
-	background: #343434;
+	background: #5f2424;
 	color: var(--light-text-color);
 	padding: 0.5em 1em;
 	border-radius: 5px;
@@ -150,7 +150,7 @@ p.lead {
 	background: #d9edf7;
 	border: 1px solid #bcdff1;
 	border-radius: 5px;
-	color: #31708f;
+	color: #ca468f;
 }
 ul, ol {
 	line-height: 1.8;

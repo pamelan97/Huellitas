@@ -37,11 +37,12 @@ class UsuarioModel extends Model
         return $unUsuario;
     }
 
-    public function usuarioPorCorreo($unCorreo){
+    public function usuarioPorCorreo($unCorreo,$unaClave){
         // Instancia de builder SQL
         $unBuilder = $this->builder();
         // Que el correo sea el valor que quiero
-        $unBuilder->where('usuario_correo',$unCorreo); // 
+        $unBuilder->where('usuario_correo',$unCorreo); //
+        $unBuilder->where('usuario_clave',$unaClave); 
         $consulta = $unBuilder->get();
         return $consulta->getCustomResultObject('App\Entities\UsuarioEntity');
     }
