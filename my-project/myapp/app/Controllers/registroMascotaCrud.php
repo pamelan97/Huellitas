@@ -3,33 +3,32 @@ namespace App\Controllers;
 //
 use CodeIgniter\Controller;
 //
-use App\Models\registroModel;
-use App\Entities\Registro;
-use App\Models\UsuarioModel;
+use App\Entities\RegistroMascotaEntity;
+use App\Models\registroMascotaModel;
 //
 class registroMascotaCrud extends Controller
 {
 public function index(){
     // Obtenemos la clase del Model que controla los conciertos
-    $mod = new registroModel();
+    $mod = new registroMascotaModel();
     // Buscamos los conciertos
-    $usuarios = $mod->todEs();
+    $mascota = $mod->todEs();
     // UN EJEMPLO PARA MAS ADELANTE
     //$conciertos = $mod->soloConA();
     
     // Ponemos en la 'data transiente' la data que queremos mostrar
-    $data['registros'] = $usuarios;
+    $data['registros'] = $mascota;
     // Vamos a la vista ... pero con los datos!!!
     return view('registro/lista',$data);
 }
 
 private function recuperauser($unId){
     // Obtenemos la clase del Model que controla los conciertos
-    $mod = new registroModel();
+    $mod = new registroMascotaModel();
     // Buscamos el Concierto por la PK
-    $usuarios = $mod->find($unId);
+    $mascota = $mod->find($unId);
     // Dejamos el concierto la 'data transiente'
-    $laData['registro'] = $usuarios;
+    $laData['registro'] = $mascota;
     return $laData;
 }
 
@@ -47,18 +46,18 @@ public function agregar01Formulario(){
 public function agregar02Continuar(){
     
     
-    $model = new UsuarioModel();
-    $unCorreo = $this->request->getVar('correo');
-        $usuario = $model->usuarioPorCorreo($unCorreo);
+    $model = new registroMascotaModel();
+    $unamascota = $this->request->getVar('nombre_mascota');
+        $mascota = $model->nombreMascota($unamascota);
         // **$clave = $model->usuarioPorclave($unaClave);
 
-        if (sizeof($usuario) !=1 ) {
+        if (sizeof($mascota) !=1 ) {
              // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new registro();
-    $unRegistro->correo =  $this->request->getVar('correo');
-    $unRegistro->clave =  $this->request->getVar('clave');
+    $unRegistro->nombre_mascota =  $this->request->getVar('nombre_mascota');
+
     // Obtenemos la clase del Model que controla los conciertos
-    $mod = new registroModel();
+    $mod = new registroMascotaModel();
     // MAndamos la Transacciòn ala Base de DAtos
     $mod->save($unRegistro);
     //
@@ -67,8 +66,7 @@ public function agregar02Continuar(){
         }
         else{
            
-            echo "Disculpe, ya esta registrado";
-            return view('registro/agregar01Formulario'); 
+                        return view('registro/agregar01Formulario'); 
            
             
         }
