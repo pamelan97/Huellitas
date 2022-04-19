@@ -12,14 +12,14 @@ public function index(){
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroMascotaModel();
     // Buscamos los conciertos
-    $mascota = $mod->todEs();
+    $mascotas = $mod->todEs();
     // UN EJEMPLO PARA MAS ADELANTE
     //$conciertos = $mod->soloConA();
     
     // Ponemos en la 'data transiente' la data que queremos mostrar
-    $data['registros'] = $mascota;
+    $data['registros'] = $mascotas;
     // Vamos a la vista ... pero con los datos!!!
-    return view('registro/lista',$data);
+    return view('registromascota/listaMascota',$data);
 }
 
 private function recuperauser($unId){
@@ -36,24 +36,24 @@ public function ver($id){
     // 
     $data = $this->recuperauser($id);
     //Vamos a la vista
-    return view('registro/ver',$data);
+    return view('registromascota/ver',$data);
 }
 
-public function agregar01Formulario(){
-    return view('registro/agregar01Formulario');
+public function agregar01Mascota(){
+    return view('registromascota/agregar01Mascota');
 }
 
-public function agregar02Continuar(){
+public function agregar02Mascota(){
     
     
     $model = new registroMascotaModel();
     $unamascota = $this->request->getVar('nombre_mascota');
-        $mascota = $model->nombreMascota($unamascota);
+        $mascota = $model->nombre_mascota($unamascota);
         // **$clave = $model->usuarioPorclave($unaClave);
 
         if (sizeof($mascota) !=1 ) {
              // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
-    $unRegistro = new registro();
+    $unRegistro = new RegistroMascotaEntity();
     $unRegistro->nombre_mascota =  $this->request->getVar('nombre_mascota');
 
     // Obtenemos la clase del Model que controla los conciertos
@@ -66,7 +66,7 @@ public function agregar02Continuar(){
         }
         else{
            
-                        return view('registro/agregar01Formulario'); 
+                        return view('registromascota/agregar01Mascota'); 
            
             
         }

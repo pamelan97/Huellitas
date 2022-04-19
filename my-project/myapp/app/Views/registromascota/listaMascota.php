@@ -17,7 +17,7 @@
 
 <!--
 <div class="d-flex justify-content-end">
-    <a href="<?php echo site_url('/registroCrud/agregar01formulario') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
+    <a href="<?php echo site_url('/registroMascotaCrud/agregar01Mascota') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
 	</div>
 
 <div class="mt-3">
@@ -46,10 +46,9 @@
           <?php foreach($registros as $reg): ?>
           <tr>
              <td><?php echo $reg->id; ?></td>
-             <td><?php echo $reg->correo; ?></td>
-             <td><?php echo $reg->clave; ?></td>
+             <td><?php echo $reg->nombre_mascota; ?></td>
              <td>
-              <a href="<?php echo site_url('/registroCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
+              <a href="<?php echo site_url('/registroMascotaCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
               <a href="<?php echo site_url('/registroCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
               <a href="<?php echo site_url('/registroCrud/eliminar01Formulario'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
               </td>

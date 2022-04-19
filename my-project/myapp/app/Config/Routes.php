@@ -56,3 +56,4 @@ $routes->add('registro', 'registroCrud::agregar01Formulario');
 $routes->add('login', 'LoginLogOutController::login01Formulario');
 $routes->add('login-login01Validar/', 'LoginLogOutController::login02Validar/');
 $routes->add('login-logout', 'LoginLogOutController::logout');
+$routes->add('registromascota', 'registroMascotaCrud::agregar01Mascota');
