@@ -6,7 +6,7 @@
     <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
       <div class="form-group">
         <label>correo</label>
-        <input type="mail" name="correo" class="form-control" value="<?php echo($registro->correo); ?>"/>
+        <input type="email" name="correo" class="form-control" value="<?php echo($registro->correo); ?>"/>
       </div>
       <div class="form-group">
         <label>clave</label>
