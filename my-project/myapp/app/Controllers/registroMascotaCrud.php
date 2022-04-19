@@ -45,14 +45,7 @@ public function agregar01Mascota(){
 
 public function agregar02Mascota(){
     
-    
-    $model = new registroMascotaModel();
-    $unamascota = $this->request->getVar('nombre_mascota');
-        $mascota = $model->nombre_mascota($unamascota);
-        // **$clave = $model->usuarioPorclave($unaClave);
-
-        if (sizeof($mascota) !=1 ) {
-             // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
+     // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new RegistroMascotaEntity();
     $unRegistro->nombre_mascota =  $this->request->getVar('nombre_mascota');
 
@@ -62,14 +55,6 @@ public function agregar02Mascota(){
     $mod->save($unRegistro);
     //
     return $this->index();
-    
-        }
-        else{
-           
-                        return view('registromascota/agregar01Mascota'); 
-           
-            
-        }
     
    
 }

@@ -1,0 +1,7 @@
+CRITICAL - 2022-04-19 09:17:35 --> Too few arguments to function App\Models\UsuarioModel::usuarioPorCorreo(), 1 passed in /app/myapp/app/Controllers/RegistroCrud.php on line 52 and exactly 2 expected
+#0 /app/myapp/app/Controllers/RegistroCrud.php(52): App\Models\UsuarioModel->usuarioPorCorreo()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroCrud->agregar02Continuar()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
