@@ -51,7 +51,7 @@ class LoginLogOutController extends BaseController
         }
         else{
            
-            echo "Disculpe, no esta registrado con nosotros";
+            echo "Correo electrónico y/o contraseña inválidos.";
             return $this->login01Formulario();  
             
         }
