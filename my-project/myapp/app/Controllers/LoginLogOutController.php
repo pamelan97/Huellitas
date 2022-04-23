@@ -16,7 +16,7 @@ class LoginLogOutController extends BaseController
         // Como Debe funcionar
         // ** Mosrar el formulario de Login
 
-        // Por mientras
+        // Por mientras xxxxx
         // ** Lista de usaurios desde la BD
         
         return view('login/login01Formulario');
@@ -24,7 +24,7 @@ class LoginLogOutController extends BaseController
 
     public function login02Validar()
     {
-        // Como debe funcioanr
+        // Como debe funcioanr-
         // ** Recueprar los datos
         $unCorreo = $_POST["el_correo"];
         $unaClave = $_POST["la_clave"];
