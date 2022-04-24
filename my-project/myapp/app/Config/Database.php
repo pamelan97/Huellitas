@@ -32,7 +32,7 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'huellitas_mariadb_1',
+        'hostname' => 'huellitas-mariadb-1',
         'username' => 'tesis',
         'password' => 't12345',
         'database' => 'bitnami_myapp',
