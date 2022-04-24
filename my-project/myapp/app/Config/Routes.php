@@ -67,21 +67,3 @@ $routes->get('base-editar-continuar', 'NavegarBaseController::editar02Continuar'
 $routes->get('base-eliminar', 'NavegarBaseController::eliminar');
 $routes->post('base-elimnar-continuar', 'NavegarBaseController::eliminar02Continuar');
 
-// CRUD
-//
-//
-$routes->get('login-index', 'registroMascotaCrud::index');
-//
-$routes->get('registromascota-ver/(:num)', 'registroMascotaCrud::ver/$1');
-//
-$routes->get('registromascota-agregar', 'registroMascotaCrud::agregar01Formulario');
-$routes->post('registromascota-agregar-continuar', 'registroMascotaCrud::agregar02Continuar');
-//
-$routes->add('registromascota-editar/(:num)', 'registroMascotaCrud::editar01Formulario/$1');
-$routes->post('registromascota-editar-continuar', 'registroMascotaCrud::editar02Continuar');
-//
-$routes->get('registromascota-eliminar/(:num)', 'registroMascotaCrud::eliminar01Formulario/$1');
-$routes->post('registromascota-elimnar-continuar', 'registroMascotaCrud::eliminar02Continuar');
-//
-$routes->add('registromascota-cancelar', 'registroMascotaCrud::cancelar');
-//
