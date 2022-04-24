@@ -8,8 +8,11 @@ class RegistroMascotaEntity extends Entity
 {
 
     protected $datamap = [
-        "id" => "placa_id",
-        "nombre_mascota" => "placa_nombre_mascota",
+        "id" => "mascota_id",
+        "mascota_nombre" => "mascota_nombre",
+        "mascota_nombre" => "mascota_nombre",
+        "mascota_nacimiento" => "mascota_nacimiento",
+        "mascota_raza" => "mascota_raza",
       
     ];
 

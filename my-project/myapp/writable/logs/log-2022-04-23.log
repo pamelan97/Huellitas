@@ -52,3 +52,52 @@ Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Name or 
 #6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #8 {main}
+ERROR - 2022-04-23 23:30:50 --> Error connecting to the database: Access denied for user '****'@'172.25.0.3' (using password: YES)
+CRITICAL - 2022-04-23 23:30:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'172.25.0.3' (using password: YES)
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/app/Models/UsuarioModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(42): App\Models\UsuarioModel->usuarioPorCorreo()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-04-23 23:31:42 --> Error connecting to the database: Access denied for user '****'@'172.25.0.3' (using password: YES)
+CRITICAL - 2022-04-23 23:31:42 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'172.25.0.3' (using password: YES)
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/app/Models/UsuarioModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(42): App\Models\UsuarioModel->usuarioPorCorreo()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-04-23 23:32:02 --> Error connecting to the database: Access denied for user '****'@'172.25.0.3' (using password: YES)
+CRITICAL - 2022-04-23 23:32:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'172.25.0.3' (using password: YES)
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#3 /app/myapp/system/BaseModel.php(738): CodeIgniter\Model->doInsert()
+#4 /app/myapp/system/Model.php(625): CodeIgniter\BaseModel->insert()
+#5 /app/myapp/system/BaseModel.php(658): CodeIgniter\Model->insert()
+#6 /app/myapp/app/Controllers/RegistroCrud.php(56): CodeIgniter\BaseModel->save()
+#7 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroCrud->agregar02Continuar()
+#8 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#9 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#10 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-04-23 23:37:10 --> Invalid file: login/index.php
+#0 /app/myapp/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /app/myapp/app/Controllers/LoginLogOutController.php(12): view()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(49): App\Controllers\LoginLogOutController->index()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

@@ -4,10 +4,11 @@ use CodeIgniter\Model;
 use App\Entities\RegistroMascotaEntity;
 class registroMascotaModel extends Model
 {
-    protected $table = 'placas';
-    protected $primaryKey = 'placa_id';
+    protected $table = 'mascota';
+    protected $primaryKey = 'mascota_id';
     
-    protected $allowedFields = ['placa_nombre_mascota'];
+    protected $allowedFields = ['mascota_nombre', 'mascota_nacimiento', 'mascota_raza'];
+
 
     // Tipo de dato a devolver
     protected $returnType = 'App\Entities\RegistroMascotaEntity'; 
@@ -52,7 +53,7 @@ class registroMascotaModel extends Model
 
         // Abusando del framework porque estamos actualziando por llave priamria
         $parametros = [
-            'placa_nombre_mascota' => $unRegistro->nombre_mascota,
+            'mascota_nombre' => $unRegistro->mascota_nombre,
                    
         ]
         ;
@@ -66,8 +67,8 @@ class registroMascotaModel extends Model
 
     public function soloConA(){
         $b = $this->builder();
-        $b->like('placa_nombre_mascota','A'); // esto es concierto_nombre like '%A%'
-    
+        $b->like('mascota_nombre','A'); // esto es concierto_nombre like '%A%'
+        $b->orderBy('mascota_nombre', 'ASC');
         $consulta = $b->get();
         return $consulta->getCustomResultObject('App\Entities\RegistroMascotaEntity');
     }

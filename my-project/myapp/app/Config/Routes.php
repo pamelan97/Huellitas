@@ -57,3 +57,31 @@ $routes->add('login', 'LoginLogOutController::login01Formulario');
 $routes->add('login-login01Validar/', 'LoginLogOutController::login02Validar/');
 $routes->add('login-logout', 'LoginLogOutController::logout');
 $routes->add('registromascota', 'registroMascotaCrud::agregar01Mascota');
+
+// Ejemplo base
+
+$routes->get('base-index', 'NavegarBaseController::index');
+$routes->get('base-ver', 'NavegarBaseController::ver');
+$routes->get('base-editar', 'NavegarBaseController::editar01Formulario');
+$routes->get('base-editar-continuar', 'NavegarBaseController::editar02Continuar');
+$routes->get('base-eliminar', 'NavegarBaseController::eliminar');
+$routes->post('base-elimnar-continuar', 'NavegarBaseController::eliminar02Continuar');
+
+// CRUD
+//
+//
+$routes->get('login-index', 'registroMascotaCrud::index');
+//
+$routes->get('registromascota-ver/(:num)', 'registroMascotaCrud::ver/$1');
+//
+$routes->get('registromascota-agregar', 'registroMascotaCrud::agregar01Formulario');
+$routes->post('registromascota-agregar-continuar', 'registroMascotaCrud::agregar02Continuar');
+//
+$routes->add('registromascota-editar/(:num)', 'registroMascotaCrud::editar01Formulario/$1');
+$routes->post('registromascota-editar-continuar', 'registroMascotaCrud::editar02Continuar');
+//
+$routes->get('registromascota-eliminar/(:num)', 'registroMascotaCrud::eliminar01Formulario/$1');
+$routes->post('registromascota-elimnar-continuar', 'registroMascotaCrud::eliminar02Continuar');
+//
+$routes->add('registromascota-cancelar', 'registroMascotaCrud::cancelar');
+//
