@@ -4,7 +4,8 @@
 <?= $this->section('contenido') ?>
 
   <div class="container mt-5">
-  <h1>Registro de usuario</h1>
+  <h1 class="text-center">Registro de Usuario</h1>
+  <h4>Datos de dueño:</h4>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroCrud/agregar02Continuar') ?>">
       <div class="form-group">
         <label>Ingrese su correo electrónico</label>
@@ -15,20 +16,43 @@
         <input type="password" name="clave" class="form-control" required/>
       </div>
       <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-sm">REGISTRARSE</button>
+        <label>Ingrese su teléfono 1:</label>
+        <input type="phone" name="telefono1" class="form-control" required/>
+      </div>
+      <div class="form-group">
+        <label>Ingrese su teléfono 2:</label>
+        <input type="phone" name="telefono2" class="form-control" required/>
+      </div>
+
+      <h4>Datos de mascota:</h4>
+      <div class="form-group">
+        <label>Ingrese nombre mascota</label>
+        <input type="text" name="nombreMascota" class="form-control" required/>
+      </div>
+      <div class="form-group">
+        <label>Ingrese fecha de nacimiento de mascota</label>
+        <input type="date" name="fechaMascota" class="form-control" required/>
+      </div>
+      <div class="form-group">
+        <label>Ingrese raza de mascota</label>
+        <input type="text" name="razaMascota" class="form-control" required/>
+      </div>
+      <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-sm">REGISTRAR</button>
       <a href="<?php echo site_url('######');?>" class="btn btn-secondary btn-sm">Cancelar</a>
       </div>
     </form>
   </div>
+  
   <script>
     if ($("#add_create").length > 0) {
       $("#add_create").validate({
         rules: {
-          concierto: {
+          correo: {
             required: true,
             maxlength: 100
           },
-          ubicacion: {
+          clave: {
             required: true,
             maxlength: 150
           },

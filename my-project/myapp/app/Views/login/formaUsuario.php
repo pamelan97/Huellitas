@@ -23,8 +23,8 @@
       $usr =   $_SESSION['USR'];
     ?>
     <p>
-        <b><?php echo $usr->usuario_correo?></b>
-        <a href="<?php echo site_url('/login')?>">Cerrar Sesión</a>
+        <b><?php echo $usr->usuario_correo?></b><br>
+        <a href="<?php echo site_url('/#')?>">Cerrar Sesión</a>
     </p>
     <?php }else{ ?>
     <p>

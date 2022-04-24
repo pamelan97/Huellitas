@@ -1,9 +1,6 @@
-<?= $this->extend('/login/formausuario') ?>
+<?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 
-<div class="d-flex justify-content-end">
-    <a href="<?php echo site_url('/registroCrud/agregar01formulario') ?>" class="btn btn-success mb-2">Agregar Mascota</a>
-	</div>
 
 <div class="mt-3">
      <table class="table table-bordered" id="users-list">
@@ -32,13 +29,13 @@
           <?php foreach($registros as $reg): ?>
           <tr>
              <td><?php echo $reg->id; ?></td>
-             <td><?php echo $reg->nombre; ?></td>
-             <td><?php echo $reg->fecha; ?></td>
-             <td><?php echo $reg->raza; ?></td>
+             <td><?php echo $reg->nombreMascota; ?></td>
+             <td><?php echo $reg->fechaMascota; ?></td>
+             <td><?php echo $reg->razaMascota; ?></td>
              <td>
-              <a href="<?php echo site_url('/registroMascotaCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
-              <a href="<?php echo site_url('/registroMascotaCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
-              <a href="<?php echo site_url('/registroMascotaCrud/eliminar01Formulario'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
+              <a href="<?php echo site_url('/registroCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
+              <a href="<?php echo site_url('/registroCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
+              <a href="<?php echo site_url('/registroCrud/eliminar01Formulario'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
               </td>
           </tr>
          <?php endforeach; ?>
@@ -46,5 +43,10 @@
        </tbody>
      </table>
   </div>
+  <script>
+    $(document).ready( function () {
+      $('#users-list').DataTable();
+  } );
+</script>
 
 <?= $this->endSection() ?>

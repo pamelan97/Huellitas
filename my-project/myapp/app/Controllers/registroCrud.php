@@ -50,6 +50,11 @@ public function agregar02Continuar(){
     $unRegistro = new registro();
     $unRegistro->correo =  $this->request->getVar('correo');
     $unRegistro->clave =  $this->request->getVar('clave');
+    $unRegistro->telefono1 =  $this->request->getVar('telefono1');
+    $unRegistro->telefono2 =  $this->request->getVar('telefono2');
+    $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
+    $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
+    $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroModel();
     // MAndamos la Transacciòn ala Base de DAtos
@@ -73,6 +78,11 @@ public function editar02Continuar(){
     $unRegistro->id = $this->request->getVar('id');
     $unRegistro->correo =  $this->request->getVar('correo');
     $unRegistro->clave =  $this->request->getVar('clave');
+    $unRegistro->telefono1 =  $this->request->getVar('telefono1');
+    $unRegistro->telefono2 =  $this->request->getVar('telefono2');
+    $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
+    $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
+    $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroModel();
     // Mandamos la Transacciòn ala Base de DAtos

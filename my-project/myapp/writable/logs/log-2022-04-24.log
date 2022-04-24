@@ -1,0 +1,26 @@
+ERROR - 2022-04-24 13:04:12 --> Error connecting to the database: Access denied for user '****'@'172.20.0.3' (using password: YES)
+CRITICAL - 2022-04-24 13:04:12 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'172.20.0.3' (using password: YES)
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/system/Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#3 /app/myapp/system/BaseModel.php(738): CodeIgniter\Model->doInsert()
+#4 /app/myapp/system/Model.php(625): CodeIgniter\BaseModel->insert()
+#5 /app/myapp/system/BaseModel.php(658): CodeIgniter\Model->insert()
+#6 /app/myapp/app/Controllers/RegistroCrud.php(61): CodeIgniter\BaseModel->save()
+#7 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroCrud->agregar02Continuar()
+#8 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#9 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#10 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-04-24 14:08:23 --> Invalid file: /registro/formaUsuario.php
+#0 /app/myapp/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /app/myapp/system/View/View.php(226): CodeIgniter\View\View->render()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(12): view()
+#4 /app/myapp/app/Controllers/LoginLogOutController.php(49): App\Controllers\LoginLogOutController->index()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

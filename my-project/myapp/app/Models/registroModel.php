@@ -7,7 +7,7 @@ class registroModel extends Model
     protected $table = 'usuarios';
     protected $primaryKey = 'usuario_id';
     
-    protected $allowedFields = ['usuario_correo', 'usuario_clave'];
+    protected $allowedFields = ['usuario_correo', 'usuario_clave','usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota', 'usuario_nacimiento_mascota', 'usuario_raza_mascota'];
 
     // Tipo de dato a devolver
     protected $returnType = 'App\Entities\Registro'; 
@@ -53,7 +53,12 @@ class registroModel extends Model
         // Abusando del framework porque estamos actualziando por llave priamria
         $parametros = [
             'usuario_correo' => $unRegistro->correo,
-            'usuario_clave' => $unRegistro->clave           
+            'usuario_clave' => $unRegistro->clave,  
+            'usuario_telefono1' => $unRegistro->telefono1,
+            'usuario_telefono2' => $unRegistro->telefono2,
+            'usuario_nombre_mascota' => $unRegistro->nombreMascota,
+            'usuario_nacimiento_mascota' => $unRegistro->fechaMascota,      
+            'usuario_raza_mascota' => $unRegistro->razaMascota  
         ]
         ;
 
