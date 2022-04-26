@@ -8,11 +8,11 @@
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/agregar02Mascota') ?>">
       <div class="form-group">
         <label>Ingrese su número de telefono 1</label>
-        <input type="phone" name="nombreMascota" class="form-control" required/>
+        <input type="phone" name="telefono1" class="form-control" required/>
       </div>
       <div class="form-group">
         <label>Ingrese su número de telefono 1</label>
-        <input type="phone" name="nombreMascota" class="form-control" required/>
+        <input type="phone" name="telefono2" class="form-control" required/>
       </div>
       <div class="form-group">
         <label>Ingrese el nombre de su mascota</label>
