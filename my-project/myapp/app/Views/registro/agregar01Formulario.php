@@ -16,28 +16,6 @@
         <input type="password" name="clave" class="form-control" required/>
       </div>
       <div class="form-group">
-        <label>Ingrese su teléfono 1:</label>
-        <input type="phone" name="telefono1" class="form-control" required/>
-      </div>
-      <div class="form-group">
-        <label>Ingrese su teléfono 2:</label>
-        <input type="phone" name="telefono2" class="form-control" required/>
-      </div>
-
-      <h4>Datos de mascota:</h4>
-      <div class="form-group">
-        <label>Ingrese nombre mascota</label>
-        <input type="text" name="nombreMascota" class="form-control" required/>
-      </div>
-      <div class="form-group">
-        <label>Ingrese fecha de nacimiento de mascota</label>
-        <input type="date" name="fechaMascota" class="form-control" required/>
-      </div>
-      <div class="form-group">
-        <label>Ingrese raza de mascota</label>
-        <input type="text" name="razaMascota" class="form-control" required/>
-      </div>
-      <div class="form-group">
       <button type="submit" class="btn btn-primary btn-sm">REGISTRAR</button>
       <a href="<?php echo site_url('######');?>" class="btn btn-secondary btn-sm">Cancelar</a>
       </div>

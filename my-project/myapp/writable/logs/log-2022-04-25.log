@@ -10,3 +10,24 @@ Main connection [MySQLi]: Access denied for user '****'@'172.18.0.3' (using pass
 #6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-04-25 22:04:58 --> There is no data to insert.
+#0 /app/myapp/system/BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+#1 /app/myapp/system/Model.php(625): CodeIgniter\BaseModel->insert()
+#2 /app/myapp/system/BaseModel.php(658): CodeIgniter\Model->insert()
+#3 /app/myapp/app/Controllers/RegistroMascotaCrud.php(58): CodeIgniter\BaseModel->save()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar02Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-25 22:06:33 --> There is no data to insert.
+#0 /app/myapp/system/BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+#1 /app/myapp/system/Model.php(625): CodeIgniter\BaseModel->insert()
+#2 /app/myapp/system/BaseModel.php(658): CodeIgniter\Model->insert()
+#3 /app/myapp/app/Controllers/RegistroMascotaCrud.php(58): CodeIgniter\BaseModel->save()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar02Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-04-25 22:18:24 --> Column 'usuario_telefono1' cannot be null
