@@ -1,0 +1,12 @@
+ERROR - 2022-04-25 21:07:08 --> Error connecting to the database: Access denied for user '****'@'172.18.0.3' (using password: YES)
+CRITICAL - 2022-04-25 21:07:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'172.18.0.3' (using password: YES)
+#0 /app/myapp/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /app/myapp/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 /app/myapp/app/Models/UsuarioModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(42): App\Models\UsuarioModel->usuarioPorCorreo()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
