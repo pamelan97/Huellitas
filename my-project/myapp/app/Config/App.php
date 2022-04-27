@@ -24,7 +24,7 @@ class App extends BaseConfig
      * @var string
      */
     //cambiar ip al cambiar la wifi
-    public $baseURL = 'http://localhost:8000/';
+    public $baseURL = 'http://192.168.1.82:8000/';
     //public $baseURL = 'http://10.50.49.101:8000/';
 
     /**
