@@ -2,11 +2,21 @@
 
 namespace App\Controllers;
 
+use App\Entities\PlacasEntities;
+use App\Models\PlacasMascotasModel;
+
 class PlacasController extends BaseController
 {
-    public function registroplaca()
+    public function registroplaca($idPlaca)
     {
-        return view('registro/registro');
-        return view('registromascota/registromascota');
+        $model = new PlacasMascotasModel();
+        $placaMascota = $model->getPlaca($idPlaca);
+
+        if ($placaMascota->idMascotas){
+            
+        }
+        else {
+            return view('regitromascota');
+        }
     }
 }

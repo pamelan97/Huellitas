@@ -1,4 +1,4 @@
-
+<?php session_start();?>
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
@@ -6,7 +6,8 @@
   <div class="container mt-5">
   <h1>Formulario datos de Mascota</h1>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/agregar02Mascota') ?>">
-      <div class="form-group">
+    <input type="hidden" name="usuario_id" value="<?=$_SESSION['USR']?>">  
+    <div class="form-group">
         <label>Ingrese su número de telefono 1</label>
         <input type="phone" name="telefono1" class="form-control" required/>
       </div>

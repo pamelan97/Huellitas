@@ -1,7 +1,9 @@
 <?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 
-
+<div class="d-flex justify-content-end">
+        <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
+	</div>
 <div class="mt-3">
      <table class="table table-bordered" id="users-list">
        <thead>
