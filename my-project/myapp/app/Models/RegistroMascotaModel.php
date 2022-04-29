@@ -16,7 +16,7 @@ class registroMascotaModel extends Model
 
    
 
-    protected $allowedFields = ['usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'];
+    protected $allowedFields = ['usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'.'usuario_tamaño_mascota','usuario_genero_mascota'];
 
 
 
@@ -114,7 +114,9 @@ class registroMascotaModel extends Model
 
             'usuario_raza_mascota' => $unRegistro->razaMascota,
 
-                   
+            'usuario_tamaño_mascota' => $unRegistro->razaMascota,
+            
+            'usuario_genero_mascota' => $unRegistro->razaMascota,
 
         ]
 

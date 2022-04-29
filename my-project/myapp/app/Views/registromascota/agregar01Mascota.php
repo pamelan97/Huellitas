@@ -59,7 +59,7 @@
       
       <div class="form-group">
         <label>Adjuntar imagen de tu mascota</label>
-        <input type="text" name="fotoMascota" class="form-control" required/>
+        <input type="text" name="fotoMascota" class="form-control" required/> <br>
 
       <div class="form-group">
       <button type="submit" class="btn btn-primary btn-sm">REGISTRAR DATOS DE MASCOTA</button>

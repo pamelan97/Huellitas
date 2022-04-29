@@ -80,6 +80,9 @@ public function editar02Continuar(){
     $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
     $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
     $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
+    $unRegistro->tamañoMascota =  $this->request->getVar('tamañoMascota');
+    $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
+
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroMascotaModel();
     // Mandamos la Transacciòn ala Base de DAtos
