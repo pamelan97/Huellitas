@@ -10,13 +10,13 @@ class registroMascotaModel extends Model
 
 {
 
-    protected $table = 'usuarioRegistro';
+    protected $table = 'usuarioRegistro1';
 
-    protected $primaryKey = 'usuarioRegistro_id';
+    protected $primaryKey = 'id';
 
    
 
-    protected $allowedFields = ['usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'.'usuario_tamano_mascota','usuario_genero_mascota'];
+    protected $allowedFields = ['usuarioRegistro_id', 'usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'.'usuario_tamano_mascota','usuario_genero_mascota'];
 
 
 
@@ -39,6 +39,7 @@ class registroMascotaModel extends Model
 
 
          $parametros = [
+            'usuarioRegistro_id' => $unRegistro->usuario_id,
 
             'usuario_telefono1' => $unRegistro->telefono1,
 
@@ -48,9 +49,9 @@ class registroMascotaModel extends Model
 
             'usuario_nacimiento_mascota' => $unRegistro->fechaMascota,
 
-            'usuario_raza_mascota' => $unRegistro->razaMascota,
+            'usuario_raza_mascota' => $unRegistro->razitaMascota,
 
-            'usuario_tamano_mascota' => $unRegistro->tamanoMascota,
+            'usuario_tamano_mascota' => $unRegistro->tamanitoMascota,
             
             'usuario_genero_mascota' => $unRegistro->generoMascota,
 
@@ -64,7 +65,14 @@ class registroMascotaModel extends Model
 
     }
 
+    public function unaMascota(Int $id){
+        $unaMascota = $this->builder();
 
+        $unaMascota->where('usuarioRegistro_id',$id); //la mascota del dueño id
+
+        $consulta = $unaMascota->get();
+        return $consulta->getCustomResultObject('App\Entities\RegistroMascotaEntity');
+    }
 
     public function todEs(){
 

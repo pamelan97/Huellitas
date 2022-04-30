@@ -63,11 +63,10 @@ class PlacasMascotasModel extends Model
 
     }
 
-    public function getPlaca($pk){
+    public function getPlaca($pk){// vamos a obtener una infromacion de la placa 
             $unaPlaca = $this->find($pk);
-            error_log(gettype($unaPlaca));
             return $unaPlaca;
-        }
+        } 
 }
 
 ?>

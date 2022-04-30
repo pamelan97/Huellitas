@@ -1,3 +1,4 @@
+<?php session_start () ?>
 <?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 

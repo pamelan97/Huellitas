@@ -4,13 +4,24 @@ namespace App\Controllers;
 
 use App\Models\UsuarioModel;
 use CodeIgniter\Throttle\ThrottlerInterface;
-
+use App\Entities\RegistroMascotaEntity;
+use App\Models\registroMascotaModel;
+//
 class LoginLogOutController extends BaseController
 {
-    public function index(){
-        // Pal Home
-        return view('login/index');
-    }
+public function index(){
+    // Obtenemos la clase del Model que controla los conciertos
+    $mod = new registroMascotaModel();
+    // Buscamos los conciertos
+    $mascotas = $mod->todEs();
+    // UN EJEMPLO PARA MAS ADELANTE
+    //$conciertos = $mod->soloConA();
+    
+    // Ponemos en la 'data transiente' la data que queremos mostrar
+    $data['registros'] = $mascotas;
+    // Vamos a la vista ... pero con los datos!!!
+    return view('login/index',$data);
+}
     public function login01Formulario()
     {
         // Como Debe funcionar

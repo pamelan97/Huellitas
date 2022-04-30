@@ -3,13 +3,18 @@
 
 <?= $this->section('contenido') ?>
 
+
 <div class="container mt-5">
   <h1>Formulario datos de Mascota</h1>
   <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/agregar02Mascota') ?>">
     <input type="hidden" name="usuario_id" value="<?= $_SESSION['USR']->id ?>">
     <div class="form-group">
+      <label>Su N° de placa es:</label>
+      <input type="phone" name="placaId" class="form-control" value="<?= $placa_id ?>" readonly />
+    </div>
+    <div class="form-group">
       <label>Ingrese Primer contacto telefonico</label>
-      <input type="phone" name="telefono1" class="form-control" required />
+      <input type="phone" name="telefono1" class="form-control" value="<?= ($registro?$registro[0]->telefono1:'') ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese segundo contacto telefonico</label>
