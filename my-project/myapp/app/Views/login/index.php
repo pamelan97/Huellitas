@@ -2,7 +2,7 @@
 <?= $this->section('contenido') ?>
 
 <div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agegar Concierto</a>
+        <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agregar Mascota</a>
 	</div>
 <div class="mt-3">
      <table class="table table-bordered" id="users-list">
@@ -12,6 +12,8 @@
              <th>Nombre Mascota</th>
              <th>Fecha de Nacimiento</th>
              <th>Raza Mascota</th>
+             <th>Tamaño Mascota</th>
+             <th>Genero Mascota</th>
              <th>Action</th>
           </tr>
        </thead>
@@ -34,6 +36,8 @@
              <td><?php echo $reg->nombreMascota; ?></td>
              <td><?php echo $reg->fechaMascota; ?></td>
              <td><?php echo $reg->razaMascota; ?></td>
+             <td><?php echo $reg->tamanoMascota; ?></td>
+             <td><?php echo $reg->generoMascota; ?></td>
              <td>
               <a href="<?php echo site_url('/registroCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
               <a href="<?php echo site_url('/registroCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>

@@ -16,7 +16,7 @@ class PlacasController extends BaseController
             
         }
         else {
-            return view('regitromascota');
+            return view('registromascota');
         }
     }
 }

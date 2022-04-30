@@ -30,9 +30,9 @@ class RegistroMascotaEntity extends Entity
 
         "razaMascota" => "usuario_raza_mascota",
 
-        "razaMascota" => "usuario_tamaño_mascota",
+        "tamanoMascota" => "usuario_tamano_mascota",
 
-        "razaMascota" => "usuario_genero_mascota",
+        "generoMascota" => "usuario_genero_mascota",
      
 
     ];

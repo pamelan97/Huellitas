@@ -1,0 +1,60 @@
+CRITICAL - 2022-04-29 09:42:34 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-29 09:43:18 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-29 09:43:40 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-29 10:00:47 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-29 10:05:09 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-29 10:07:31 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

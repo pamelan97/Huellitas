@@ -59,6 +59,7 @@ $routes->add('login-login01Validar/', 'LoginLogOutController::login02Validar/');
 $routes->add('login-logout', 'LoginLogOutController::logout');
 $routes->add('registromascota', 'registroMascotaCrud::agregar01Mascota');
 
+
 // Ejemplo base
 
 $routes->get('base-index', 'NavegarBaseController::index');

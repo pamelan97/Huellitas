@@ -16,7 +16,7 @@ class registroMascotaModel extends Model
 
    
 
-    protected $allowedFields = ['usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'.'usuario_tamaño_mascota','usuario_genero_mascota'];
+    protected $allowedFields = ['usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota'.'usuario_tamano_mascota','usuario_genero_mascota'];
 
 
 
@@ -37,70 +37,6 @@ class registroMascotaModel extends Model
 
     public function actualziar (RegistroMascotaEntity $unRegistro){
 
-        /*
-
-        // Escribiendo la consulta via "keys"
-
-        $sql_update = "update conciertos set concierto_nombre = :nombre:, concierto_ubicacion= :ubicacion: where concierto_id =:id:";
-
-        $parametros = [
-
-            'nombre' => $unConcierto->nombre,
-
-            'ubicacion' => $unConcierto->ubicacion,
-
-            'id' => $unConcierto->id
-
-        ]
-
-        ;
-
-        if (!
-
-            $this->db->query(
-
-                $sql_update,
-
-                $parametros
-
-            )
-
-        ) {
-
-            $error = $db->error();
-
-            error_log($error);
-
-        }
-
-       
-
-        */
-
-
-
-        /*
-
-        // Aplicando el SQL Builder
-
-        $parametros = [
-
-            'concierto_nombre' => $unConcierto->nombre,
-
-            'concierto_ubicacion' => $unConcierto->ubicacion
-
-        ]
-
-        ;
-
-        $this->where('concierto_id',$unConcierto->id)
-
-            ->set($parametros)
-
-            ->update();
-
-        */  
-         // Abusando del framework porque estamos actualziando por llave priamria
 
          $parametros = [
 
@@ -114,9 +50,9 @@ class registroMascotaModel extends Model
 
             'usuario_raza_mascota' => $unRegistro->razaMascota,
 
-            'usuario_tamaño_mascota' => $unRegistro->razaMascota,
+            'usuario_tamano_mascota' => $unRegistro->tamanoMascota,
             
-            'usuario_genero_mascota' => $unRegistro->razaMascota,
+            'usuario_genero_mascota' => $unRegistro->generoMascota,
 
         ]
 

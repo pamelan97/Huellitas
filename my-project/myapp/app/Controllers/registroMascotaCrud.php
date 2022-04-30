@@ -47,12 +47,14 @@ public function agregar02Mascota(){
     
      // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new RegistroMascotaEntity();
-    $unRegistro->id =  $this->request->getVar('usuario_id');
+   // $unRegistro->id =  $this->request->getVar('usuario_id');
     $unRegistro->telefono1 =  $this->request->getVar('telefono1');
     $unRegistro->telefono2 =  $this->request->getVar('telefono2');
     $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
     $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
     $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
+    $unRegistro->tamanoMascota =  $this->request->getVar('tamanoMascota');
+    $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
     
 
     // Obtenemos la clase del Model que controla los conciertos

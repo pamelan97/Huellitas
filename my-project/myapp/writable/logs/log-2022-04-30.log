@@ -1,0 +1,19 @@
+CRITICAL - 2022-04-30 10:18:14 --> Object of class App\Entities\UsuarioEntity could not be converted to string
+#0 /app/myapp/system/View/View.php(210): include()
+#1 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#3 /app/myapp/app/Controllers/registroMascotaCrud.php(43): view()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Mascota()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-04-30 10:20:16 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:22:55 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:24:03 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:24:04 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:29:50 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:36:59 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:37:27 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 10:40:26 --> Unknown column 'usuario_genero_mascota' in 'field list'
+ERROR - 2022-04-30 11:04:16 --> Duplicate entry '0' for key 'PRIMARY'
