@@ -18,22 +18,22 @@
     </div>
     <div class="form-group">
       <label>Ingrese segundo contacto telefonico</label>
-      <input type="phone" name="telefono2" class="form-control" required />
+      <input type="phone" name="telefono2" class="form-control" value="<?= ($registro?$registro[0]->telefono2:'') ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese el nombre de su mascota</label>
-      <input type="text" name="nombreMascota" class="form-control" required />
+      <input type="text" name="nombreMascota" class="form-control" value="<?= ($registro?$registro[0]->nombreMascota:'') ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese la fecha de nacimiento de su mascota</label>
-      <input type="date" name="fechaMascota" class="form-control" required />
+      <input type="date" name="fechaMascota" class="form-control" value="<?= ($registro?$registro[0]->fechaMascota:'') ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese la raza de su mascota</label>
-      <input type="text" name="razitaMascota" class="form-control" required />
+      <input type="text" name="razitaMascota" class="form-control" value="<?= ($registro?$registro[0]->razitaMascota:'') ?>" required />
     </div>
 <p>
-  <label for="Tamano"> Ingresa el tamaño de tu mascota:</label>
+  <label for="Tamano" value="<?= ($registro?$registro[0]->tamanitoMascota:'') ?>"> Ingresa el tamaño de tu mascota:</label>
 
   <select name="tamanitoMascota">
     <option value="Pequena">Raza pequeña</option>
@@ -46,12 +46,12 @@
   <label for="Genero"> Ingresa el genero de tu mascota:</label>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Macho">
+  <input type="radio" name="generoMascota" value="Macho" value="<?= ($registro?$registro[0]->generoMascota:'') ?>">
   "Macho"
   <br>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Hembra">
+  <input type="radio" name="generoMascota" value="Hembra" value="<?= ($registro?$registro[0]->generoMascota:'') ?>">
   "Hembra"
   <br>
 </p>
