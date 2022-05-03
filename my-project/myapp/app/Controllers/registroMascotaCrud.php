@@ -95,7 +95,7 @@ $data = $this->recuperauser($id);
 public function editar02Continuar(){
     // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new RegistroMascotaEntity();
-    $unRegistro->id = $this->request->getVar('id');
+    $unRegistro->usuario_id =  $this->request->getVar('usuario_id');
     $unRegistro->telefono1 =  $this->request->getVar('telefono1');
     $unRegistro->telefono2 =  $this->request->getVar('telefono2');
     $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');

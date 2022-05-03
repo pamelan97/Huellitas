@@ -7,7 +7,6 @@
 			<div class="text-center"><br>
 				<a href="<?php echo site_url('/registro') ?>" class="btn btn-success mb-2">Registrate en Huellitas</a><br>
 				<a href="<?php echo site_url('/login') ?>" class="btn btn-success mb-2">Iniciar Sesión en Huellitas</a><br>
-				<a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Registro de datos (MASCOTA)</a><br>
 			</div>
 			</ul>
 </div>
