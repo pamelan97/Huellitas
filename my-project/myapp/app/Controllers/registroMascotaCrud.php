@@ -71,8 +71,8 @@ public function agregar02Mascota(){
     $unRegistro->telefono2 =  $this->request->getVar('telefono2');
     $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
     $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
-    $unRegistro->razitaMascota =  $this->request->getVar('razaMascota');
-    $unRegistro->tamanitoMascota =  $this->request->getVar('tamanoMascota');
+    $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
+    $unRegistro->tamanoMascota =  $this->request->getVar('tamanoMascota');
     $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
     
 
@@ -89,13 +89,13 @@ public function agregar02Mascota(){
 public function editar01Formulario($id){
 $data = $this->recuperauser($id);
  //Vamos a la vista
- return view('registromascota/editar01Formulario',$data);
+ return view('editarmascota/editar01Formulario',$data);
 }
 
 public function editar02Continuar(){
     // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
     $unRegistro = new RegistroMascotaEntity();
-    $unRegistro->usuario_id =  $this->request->getVar('usuario_id');
+    $unRegistro->usuario_id =  $this->request->getVar('usuarioRegistro_id');
     $unRegistro->telefono1 =  $this->request->getVar('telefono1');
     $unRegistro->telefono2 =  $this->request->getVar('telefono2');
     $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
@@ -112,7 +112,18 @@ public function editar02Continuar(){
    return $this->index();
 }
 
- public function eliminar01Formulario($id){
+ 
+
+
+
+
+
+
+
+
+
+
+public function eliminar01Formulario($id){
     $data = $this->recuperauser($id);
     //Vamos a la vista
     return view('registromascota/eliminar',$data);

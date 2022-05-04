@@ -1,10 +1,11 @@
+
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
+
   <div class="container mt-5">
-    <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/editar01Formulario') ?>">
+    <form method="post" id="add_create" name="add_create" action="<?= site_url('/editarmascota-editar-continuar') ?>">
     <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
-    <input type="hidden" name="usuario_id" value="<?= $_SESSION['USR']->id ?>">
     <div class="form-group">
       <label>Ingrese nuevo primer contacto telefonico</label>
       <input type="phone" name="telefono1" class="form-control" required />
@@ -54,31 +55,5 @@
 </div>
     </form>
   </div>
-  <script>
-    if ($("#add_create").length > 0) {
-      $("#add_create").validate({
-        rules: {
-          correo: {
-            required: true,
-            maxlength: 100
-          },
-          clave: {
-            required: true,
-            maxlength: 150
-          },
-        },
-        messages: {
-          correo: {
-            required: "El nombre del conciorto es obligatorio",
-            maxlength: "El nombe del concierto a lo más es de 100 caracteres.",
-          },
-          clave: {
-            required: "El nombre de la ubicación es obligatorio",
-            maxlength: "La ubcicación a lo más es de 150 caracteres.",
-          },
-        },
-      })
-    }
-  </script>
   
 <?= $this->endSection() ?>

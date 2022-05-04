@@ -55,7 +55,7 @@ public function agregar02Continuar(){
     // MAndamos la Transacciòn ala Base de DAtos
     $mod->save($unRegistro);
     //
-    return $this->index();
+    return $this->index(); //TENGO QUE PONER UN IF, IF LA PLACA PENIDENTE ES DISTINTA DE NULL
    
     }
 

@@ -19,6 +19,7 @@ class RegistroMascotaEntity extends Entity
     protected $datamap = [
 
         "id" => "id",
+        
         "usuario_id" => "usuarioRegistro_id",
 
         "telefono1" => "usuario_telefono1",
@@ -29,9 +30,9 @@ class RegistroMascotaEntity extends Entity
 
         "fechaMascota" => "usuario_nacimiento_mascota",
 
-        "razitaMascota" => "usuario_raza_mascota",
+        "razaMascota" => "usuario_raza_mascota",
 
-        "tamanitoMascota" => "usuario_tamano_mascota",
+        "tamanoMascota" => "usuario_tamano_mascota",
 
         "generoMascota" => "usuario_genero_mascota",
      

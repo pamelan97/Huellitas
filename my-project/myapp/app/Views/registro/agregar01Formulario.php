@@ -5,7 +5,6 @@
 
   <div class="container mt-5">
   <h1 class="text-center">Registro de Usuario</h1>
-  <h4>Datos de dueño:</h4>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroCrud/agregar02Continuar') ?>">
       <div class="form-group">
         <label>Ingrese su correo electrónico</label>

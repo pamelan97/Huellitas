@@ -40,9 +40,7 @@
              <td><?php echo $reg->tamanoMascota; ?></td>
              <td><?php echo $reg->generoMascota; ?></td>
              <td>
-              <a href="<?php echo site_url('/registroMascotaCrud/ver'.$reg->id);?>" class="btn btn-info btn-sm">Ver</a>
-              <a href="<?php echo site_url('/registroMascotaCrud/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
-              <a href="<?php echo site_url('/registroMascotaCrud/eliminar01Formulario'.$reg->id);?>" class="btn btn-danger btn-sm">Borrar</a>
+              <a href="<?php echo site_url('/registroMascota/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
               </td>
           </tr>
          <?php endforeach; ?>
