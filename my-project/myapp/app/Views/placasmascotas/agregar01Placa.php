@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?= $this->extend('formaStandar') ?>
-
+<?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 
 
@@ -10,7 +10,7 @@
     <input type="hidden" name="usuario_id" value="<?= $_SESSION['USR']->id ?>">
     <div class="form-group">
       <label>Su N° de placa es:</label>
-      <input type="phone" name="placaId" class="form-control" value="<?= $placa_id ?>" readonly />
+      <input type="phone" name="placaId" class="form-control" value="<?= $_SESSION['PLACA']->id ?>" readonly />
     </div>
     <div class="form-group">
       <label>Ingrese Primer contacto telefonico</label>
@@ -30,15 +30,15 @@
     </div>
     <div class="form-group">
       <label>Ingrese la raza de su mascota</label>
-      <input type="text" name="razitaMascota" class="form-control" value="<?= ($registro?$registro[0]->razitaMascota:'') ?>" required />
+      <input type="text" name="razaMascota" class="form-control" value="<?= ($registro?$registro[0]->razaMascota:'') ?>" required />
     </div>
 <p>
-  <label for="Tamano" value="<?= ($registro?$registro[0]->tamanitoMascota:'') ?>"> Ingresa el tamaño de tu mascota:</label>
+  <label for="Tamano"> Ingresa el tamaño de tu mascota:</label>
 
   <select name="tamanitoMascota">
-    <option value="Pequena">Raza pequeña</option>
-    <option value="Mediana">Raza Mediana</option>
-    <option value="Grande">Raza Grande</option>
+    <option value="Pequena" <?= ($registro?($registro[0]->tamanoMascota=="Pequena"?"selected":""):'') ?>>Raza pequeña</option>
+    <option value="Mediana" <?= ($registro?($registro[0]->tamanoMascota=="Mediana"?"selected":""):'') ?>>Raza Mediana</option>
+    <option value="Grande" <?= ($registro?($registro[0]->tamanoMascota=="Grande"?"selected":""):'') ?>>Raza Grande</option>
   </select>
 </p>
 
@@ -46,12 +46,12 @@
   <label for="Genero"> Ingresa el genero de tu mascota:</label>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Macho" value="<?= ($registro?$registro[0]->generoMascota:'') ?>">
+  <input type="radio" name="generoMascota" value="Macho" <?= ($registro?($registro[0]->generoMascota=="Macho"?"checked":""):'') ?>>
   "Macho"
   <br>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Hembra" value="<?= ($registro?$registro[0]->generoMascota:'') ?>">
+  <input type="radio" name="generoMascota" value="Hembra" <?= ($registro?($registro[0]->generoMascota=="Hembra"?"checked":""):'') ?>>
   "Hembra"
   <br>
 </p>

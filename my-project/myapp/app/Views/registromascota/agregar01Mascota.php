@@ -25,12 +25,12 @@
     </div>
     <div class="form-group">
       <label>Ingrese la raza de su mascota</label>
-      <input type="text" name="razitaMascota" class="form-control" required />
+      <input type="text" name="razaMascota" class="form-control" required />
     </div>
 <p>
   <label for="Tamano"> Ingresa el tamaño de tu mascota:</label>
 
-  <select name="tamanitoMascota">
+  <select name="tamanoMascota">
     <option value="Pequena">Raza pequeña</option>
     <option value="Mediana">Raza Mediana</option>
     <option value="Grande">Raza Grande</option>

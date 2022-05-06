@@ -24,7 +24,7 @@
     ?>
     <p>
         <b><?php echo $usr->usuario_correo?></b><br>
-        <a href="<?php echo site_url('/#')?>">Cerrar Sesión</a>
+        <a href="<?php echo site_url('/login-logout')?>">Cerrar Sesión</a>
     </p>
     <?php }else{ ?>
     <p>

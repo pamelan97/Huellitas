@@ -57,9 +57,18 @@ public function index(){
             session_start();
             $_SESSION['USR']= $usuario[0];
          // **   $_SESSION['USR']= $clave[0];
+            $placa=$_SESSION['PLACA'];
+
+        if($placa){
+
+            return view('placasmascotas/agregar01Placa'); //si tenmeos placa pendiente se registra mascota
+        }
+        else{
+        
             return $this->index();
     
         }
+    }
         else{
            
             echo "Correo electrónico y/o contraseña inválidos.";
@@ -70,11 +79,14 @@ public function index(){
            
     }
 
+
     public function logout(){
         // Sacamos el USR de la Session
-
+        session_start();
+        session_unset();
         //Pal Home
-        return $this->index();
+        return view('welcome_message');
+
     }
 
 }
