@@ -1,0 +1,24 @@
+CRITICAL - 2022-05-09 20:41:26 --> Class 'App\Models\PlacasMascotasModel' not found
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\PlacasController->registroplaca()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-09 20:42:39 --> Class 'App\Models\PlacasMascotasModel' not found
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\PlacasController->registroplaca()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-09 20:42:44 --> Class 'App\Models\PlacasMascotasModel' not found
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\PlacasController->registroplaca()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-09 20:44:03 --> Class 'App\Models\PlacasMascotasModel' not found
+#0 /app/myapp/system/CodeIgniter.php(832): App\Controllers\PlacasController->registroplaca()
+#1 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

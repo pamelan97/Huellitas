@@ -4,29 +4,30 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-use App\Entities\RegistroDuenodosEntity;
+use App\Entities\PlacasEntities;
 
-class registroDuenodosModel extends Model
+class PlacasMascotasModel extends Model
 
 {
 
-    protected $table = 'duenoSegundoRegistro';
+    protected $table = 'placasMascotas';
 
-    protected $primaryKey = 'duenosegundo_id';
+    protected $primaryKey = 'placasMascotas_id';
 
    
 
-    protected $allowedFields = ['duenosegundo_id', 'duenosegundo_telefono1', 'duenosegundo_telefono2', 'duenosegundo_correo'];
+    protected $allowedFields = ['placasMascotas_id', 'usuarioRegistro_id',];
+
 
 
 
     // Tipo de dato a devolver
 
-    protected $returnType = 'App\Entities\RegistroDuenodosEntity';
+    protected $returnType = 'App\Entities\PlacasEntities';
 
 
 
-    public function  eliminar(RegistroDuenodosEntity $unRegistro){
+    public function  eliminar(PlacasEntities $unRegistro){
 
         $this->delete($unRegistro->id);
 
@@ -34,17 +35,15 @@ class registroDuenodosModel extends Model
 
 
 
-    public function actualziar (RegistroDuenodosEntity $unRegistro){
+    public function actualziar (PlacasEntities $unRegistro){
+
 
 
          $parametros = [
-            'duenosegundo_id' => $unRegistro->duenoDos_id,
 
-            'duenosegundo_telefono1' => $unRegistro->duenoTelefono1,
+            'placasMascotas_id' => $unRegistro->id,
 
-            'duenosegundo_telefono2' => $unRegistro->duenoTelefono2,
-
-            'duenosegundo_correo' => $unRegistro->duenoCorreo,
+            'usuarioRegistro_id' => $unRegistro->idMascotas,          
 
         ]
 
@@ -56,36 +55,18 @@ class registroDuenodosModel extends Model
 
     }
 
-    public function unaMascota(Int $id){
-        $unDueno = $this->builder();
 
-        $unDueno->where('duenosegundo_id',$id); //la mascota del dueño id
-
-        $consulta = $unDueno->get();
-        return $consulta->getCustomResultObject('App\Entities\RegistroDuenodosEntity');
-    }
 
     public function todEs(){
 
-        return $this->orderBy('duenosegundo_correo', 'DESC')->findAll(); // algo asi como select * from CONCIERTOS order by  CONCIERTO_NOMBRE
+        return $this->orderBy('placasMascotas_id', 'DESC')->findAll(); 
 
     }
 
-
-
-    public function soloConA(){
-
-        $b = $this->builder();
-
-        $b->like('duenosegundo_correo','A'); // esto es concierto_nombre like '%A%'
-
-        $b->orderBy('duenosegundo_telefono1', 'ASC');
-
-        $consulta = $b->get();
-
-        return $consulta->getCustomResultObject('App\Entities\RegistroDuenodosEntity');
-
-    }
-
+    public function getPlaca($pk){// vamos a obtener una infromacion de la placa 
+            $unaPlaca = $this->find($pk);
+            return $unaPlaca;
+        } 
 }
+
 ?>
