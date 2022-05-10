@@ -58,7 +58,9 @@ $routes->add('login', 'LoginLogOutController::login01Formulario');
 $routes->add('login-login01Validar/', 'LoginLogOutController::login02Validar/');
 $routes->add('login-logout', 'LoginLogOutController::logout');
 $routes->add('registromascota', 'registroMascotaCrud::agregar01Mascota');
+$routes->add('registroduenodos', 'registroDuenodosCrud::agregar01Dueno');
 $routes->add('registroplaca/(:num)', 'PlacasController::registroplaca/$1');
+
 
 // CRUD
 $routes->add('registromascotaeditar(:num)', 'registroMascotaCrud::editar01Formulario/$1');
