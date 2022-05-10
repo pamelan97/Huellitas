@@ -10,17 +10,22 @@ use CodeIgniter\Entity\Entity;
 
 
 
-class PlacasEntities extends Entity
+class RegistroDuenodosEntity extends Entity
 
 {
 
 
 
     protected $datamap = [
+        
+        "duenoDos_id" => "duenosegundo_id",
 
-        "id" => "placasMascotas_id",
-        "idMascotas" => "registroUsuario_id",
+        "correoDueno" => "duenosegundo_correo",
 
+        "duenoTelefono1" => "duenosegundo_telefono1",
+
+        "duenoTelefono2" => "duenosegundo_telefono2",
+     
     ];
 
 
@@ -30,3 +35,4 @@ class PlacasEntities extends Entity
 }
 
 ?>
+
