@@ -1,0 +1,55 @@
+ERROR - 2022-05-02 21:40:11 --> Table 'bitnami_myapp.usuarioregistro1' doesn't exist
+CRITICAL - 2022-05-02 21:40:12 --> Call to a member function getResult() on bool
+#0 /app/myapp/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#1 /app/myapp/app/Models/registroMascotaModel.php(79): CodeIgniter\BaseModel->findAll()
+#2 /app/myapp/app/Controllers/LoginLogOutController.php(16): App\Models\registroMascotaModel->todEs()
+#3 /app/myapp/app/Controllers/LoginLogOutController.php(60): App\Controllers\LoginLogOutController->index()
+#4 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#5 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-05-02 22:12:15 --> Undefined variable $registro
+#0 /app/myapp/app/Views/placasmascotas/agregar01Placa.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/View/View.php(210): include('...')
+#2 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /app/myapp/app/Controllers/registroMascotaCrud.php(62): view()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Placa()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-02 22:12:29 --> Undefined variable $registro
+#0 /app/myapp/app/Views/placasmascotas/agregar01Placa.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/View/View.php(210): include('...')
+#2 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /app/myapp/app/Controllers/registroMascotaCrud.php(62): view()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Placa()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-02 22:14:10 --> Undefined variable $registro
+#0 /app/myapp/app/Views/placasmascotas/agregar01Placa.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/View/View.php(210): include('...')
+#2 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /app/myapp/app/Controllers/registroMascotaCrud.php(62): view()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Placa()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-02 22:14:50 --> Undefined variable $registro
+#0 /app/myapp/app/Views/placasmascotas/agregar01Placa.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/View/View.php(210): include('...')
+#2 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /app/myapp/app/Controllers/registroMascotaCrud.php(62): view()
+#5 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->agregar01Placa()
+#6 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
