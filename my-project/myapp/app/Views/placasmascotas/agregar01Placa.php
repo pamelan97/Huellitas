@@ -6,11 +6,11 @@
 
 <div class="container mt-5">
   <h1>Formulario datos de Mascota</h1>
-  <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/agregar02Mascota') ?>">
+  <form method="post" id="add_create" name="add_create" action="<?= site_url('/registroMascotaCrud/agregar02PlacaMascota') ?>">
     <input type="hidden" name="usuario_id" value="<?= $_SESSION['USR']->id ?>">
     <div class="form-group">
       <label>Su N° de placa es:</label>
-      <input type="phone" name="placaId" class="form-control" value="<?= $_SESSION['PLACA']->id ?>" readonly />
+      <input type="text" name="placaId" class="form-control" value="<?= $_SESSION['PLACA']->id ?>" readonly />
     </div>
     <div class="form-group">
       <label>Ingrese Primer contacto telefonico</label>
@@ -35,7 +35,7 @@
 <p>
   <label for="Tamano"> Ingresa el tamaño de tu mascota:</label>
 
-  <select name="tamanitoMascota">
+  <select name="tamanoMascota">
     <option value="Pequena" <?= ($registro?($registro[0]->tamanoMascota=="Pequena"?"selected":""):'') ?>>Raza pequeña</option>
     <option value="Mediana" <?= ($registro?($registro[0]->tamanoMascota=="Mediana"?"selected":""):'') ?>>Raza Mediana</option>
     <option value="Grande" <?= ($registro?($registro[0]->tamanoMascota=="Grande"?"selected":""):'') ?>>Raza Grande</option>
