@@ -24,15 +24,15 @@
     </div>
     <div class="form-group">
       <label>Ingrese la nueva raza de su mascota</label>
-      <input type="text" name="razitaMascota" class="form-control" value="<?php echo($registro->razaMascota); ?>" required />
+      <input type="text" name="razaMascota" class="form-control" value="<?php echo($registro->razaMascota); ?>" required />
     </div>
 <p>
   <label for="Tamano"> Ingresa el nuevo tamaño de tu mascota:</label>
 
-  <select name="tamanitoMascota">
-    <option value="Pequena">Raza pequeña</option>
-    <option value="Mediana">Raza Mediana</option>
-    <option value="Grande">Raza Grande</option>
+  <select name="tamanoMascota">
+    <option value="Pequena" <?= ($registro->tamanoMascota=="Pequena"?"selected":""); ?>>Raza pequeña</option>
+    <option value="Mediana" <?= ($registro->tamanoMascota=="Mediana"?"selected":""); ?> >Raza Mediana</option>
+    <option value="Grande" <?= ($registro->tamanoMascota=="Grande"?"selected":""); ?> >Raza Grande</option>
   </select>
 </p>
 
@@ -40,12 +40,12 @@
   <label for="Genero"> Ingresa el nuevo genero de tu mascota:</label>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Macho">
+  <input type="radio" name="generoMascota" value="Macho" <?= ($registro->generoMascota=="Macho"?"checked":""); ?>>
   "Macho"
   <br>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Hembra">
+  <input type="radio" name="generoMascota" value="Hembra" <?= ($registro->generoMascota=="Hembra"?"checked":""); ?>>
   "Hembra"
   <br>
 </p>

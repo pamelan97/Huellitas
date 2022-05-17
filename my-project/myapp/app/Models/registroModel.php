@@ -37,11 +37,6 @@ class registroModel extends Model
     public function actualziar (Registro $unRegistro){
 
     
-
-
-
-        // Abusando del framework porque estamos actualziando por llave priamria
-
         $parametros = [
 
             'usuario_correo' => $unRegistro->correo,
