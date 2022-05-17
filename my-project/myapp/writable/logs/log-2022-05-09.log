@@ -22,3 +22,17 @@ CRITICAL - 2022-05-09 20:44:03 --> Class 'App\Models\PlacasMascotasModel' not fo
 #2 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
 #3 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2022-05-09 22:33:32 --> Undefined array key "PLACA"
+#0 /app/myapp/app/Controllers/LoginLogOutController.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-09 22:36:49 --> Undefined array key "PLACA"
+#0 /app/myapp/app/Controllers/LoginLogOutController.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\LoginLogOutController->login02Validar()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -111,61 +111,51 @@ public function agregar02Mascota(){
 }
 
 public function editar01Formulario($id){
-$data = $this->recuperauser($id);
- //Vamos a la vista
- return view('editarmascota/editar01Formulario',$data);
-}
-
-public function editar02Continuar(){
-    // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
-    $unRegistro = new RegistroMascotaEntity();
-    $unRegistro->usuario_id =  $this->request->getVar('usuarioRegistro_id');
-    $unRegistro->telefono1 =  $this->request->getVar('telefono1');
-    $unRegistro->telefono2 =  $this->request->getVar('telefono2');
-    $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
-    $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
-    $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
-    $unRegistro->tamanoMascota =  $this->request->getVar('tamanoMascota');
-    $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
-
-    // Obtenemos la clase del Model que controla los conciertos
-    $mod = new registroMascotaModel();
-    // Mandamos la Transacciòn ala Base de DAtos
-    $mod->actualziar($unRegistro);
-    // vuelve al inicio
-   return $this->index();
-}
-
- 
-
-
-
-
-
-
-
-
-
-
-public function eliminar01Formulario($id){
     $data = $this->recuperauser($id);
-    //Vamos a la vista
-    return view('registromascota/eliminar',$data);
-}
-
-public function eliminar02Continuar(){
-    // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
-   $unRegistro = new RegistroMascotaEntity();
-     $unRegistro->id = $this->request->getVar('id');
-     // Obtenemos la clase del Model que controla los conciertos
-     $mod = new registroMascotaModel();
-     // Mandamos la Transacciòn ala Base de DAtos
-     $mod->eliminar($unRegistro);   
-     //Home
-     return $this->index();
- }
-
- public function cancelar(){
-    return $this->index();
- }
-}
+     //Vamos a la vista
+     return view('registromascota/editar01Formulario',$data);
+    }
+    
+    public function editar02Continuar(){
+        // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
+        $unRegistro = new RegistroMascotaEntity();
+        $unRegistro->usuario_id =  $this->request->getVar('usuarioRegistro_id');
+        $unRegistro->telefono1 =  $this->request->getVar('telefono1');
+        $unRegistro->telefono2 =  $this->request->getVar('telefono2');
+        $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
+        $unRegistro->fechaMascota =  $this->request->getVar('fechaMascota');
+        $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
+        $unRegistro->tamanoMascota =  $this->request->getVar('tamanoMascota');
+        $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
+    
+        // Obtenemos la clase del Model que controla los conciertos
+        $mod = new registroMascotaModel();
+        // Mandamos la Transacciòn ala Base de DAtos
+        $mod->actualziar($unRegistro);
+        // vuelve al inicio
+       return $this->index();
+    }
+    
+    
+    public function eliminar01Formulario($id){
+        $data = $this->recuperauser($id);
+        //Vamos a la vista
+        return view('registromascota/eliminar',$data);
+    }
+    
+    public function eliminar02Continuar(){
+        // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
+       $unRegistro = new RegistroMascotaEntity();
+         $unRegistro->id = $this->request->getVar('id');
+         // Obtenemos la clase del Model que controla los conciertos
+         $mod = new registroMascotaModel();
+         // Mandamos la Transacciòn ala Base de DAtos
+         $mod->eliminar($unRegistro);   
+         //Home
+         return $this->index();
+     }
+    
+     public function cancelar(){
+        return $this->index();
+     }
+    }

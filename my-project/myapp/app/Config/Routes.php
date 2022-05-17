@@ -63,11 +63,12 @@ $routes->add('registroplaca/(:num)', 'PlacasController::registroplaca/$1');
 
 
 // CRUD
-$routes->add('registromascotaeditar(:num)', 'registroMascotaCrud::editar01Formulario/$1');
-$routes->post('registromascota-editar-continuar', 'registroMascotaCrud::editar02Continuar');
-//
-//$routes->get('registromascota-eliminar/(:num)', 'registroMascotaCrud::eliminar01Formulario/$1');
-//$routes->post('registromascota-elimnar-continuar', 'registroMascotaCrud::eliminar02Continuar');
-//
-//$routes->add('registromascota-cancelar', 'registroMascotaCrud::cancelar');
+$routes->add('registromascota-editar/(:num)', 'registroMascotaCrud::editar01Formulario/$1');
 
+$routes->post('registromascota-editar-continuar', 'registroMascotaCrud::editar02Continuar');
+
+//
+
+$routes->get('registromascota-eliminar/(:num)', 'registroMascotaCrud::eliminar01Formulario/$1');
+
+$routes->post('registromascota-elimnar-continuar', 'registroMascotaCrud::eliminar02Continuar');
