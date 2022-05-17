@@ -8,7 +8,7 @@
 
 <div class="container mt-5">
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registromascota-elimnar-continuar/') ?>">
-	  <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
+	  <input type="hidden" name="usuario_id" value="<?php echo($registro->id);?>"/>
       <div class="form-group">
         <label>Primer contacto telefonico: </label> <?php echo($registro->telefono1); ?>
       </div>

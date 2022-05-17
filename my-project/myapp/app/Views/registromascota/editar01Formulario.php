@@ -5,7 +5,7 @@
   <div class="container mt-5">
   <h1>Actualizar datos de Mascota</h1>
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registromascota-editar-continuar') ?>">
-    <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
+    <input type="hidden" name="usuario_id" value="<?php echo($registro->id);?>"/>
     <div class="form-group">
       <label>Ingrese nuevo primer contacto telefonico</label>
       <input type="phone" name="telefono1" class="form-control" value="<?php echo($registro->telefono1); ?>" required />
