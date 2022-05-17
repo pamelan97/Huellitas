@@ -1,30 +1,30 @@
-
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
 
   <div class="container mt-5">
-    <form method="post" id="add_create" name="add_create" action="<?= site_url('/editarmascota-editar-continuar') ?>">
+  <h1>Actualizar datos de Mascota</h1>
+    <form method="post" id="add_create" name="add_create" action="<?= site_url('/registromascota-editar-continuar') ?>">
     <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
     <div class="form-group">
       <label>Ingrese nuevo primer contacto telefonico</label>
-      <input type="phone" name="telefono1" class="form-control" required />
+      <input type="phone" name="telefono1" class="form-control" value="<?php echo($registro->telefono1); ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese nuevo segundo contacto telefonico</label>
-      <input type="phone" name="telefono2" class="form-control" required />
+      <input type="phone" name="telefono2" class="form-control" value="<?php echo($registro->telefono2); ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese el nuevo nombre de su mascota</label>
-      <input type="text" name="nombreMascota" class="form-control" required />
+      <input type="text" name="nombreMascota" class="form-control" value="<?php echo($registro->nombreMascota); ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese la nueva fecha de nacimiento de su mascota</label>
-      <input type="date" name="fechaMascota" class="form-control" required />
+      <input type="date" name="fechaMascota" class="form-control" value="<?php echo($registro->fechaMascota); ?>" required />
     </div>
     <div class="form-group">
       <label>Ingrese la nueva raza de su mascota</label>
-      <input type="text" name="razitaMascota" class="form-control" required />
+      <input type="text" name="razitaMascota" class="form-control" value="<?php echo($registro->razaMascota); ?>" required />
     </div>
 <p>
   <label for="Tamano"> Ingresa el nuevo tamaño de tu mascota:</label>

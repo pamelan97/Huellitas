@@ -1,7 +1,6 @@
 <?php session_start () ?>
 <?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
-<?= $_SESSION['USR']->id ?>
 
 <div class="d-flex justify-content-end">
         <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agregar Mascota</a>
@@ -45,7 +44,8 @@
              <td><?php echo $reg->telefono1; ?></td>
              <td><?php echo $reg->telefono2; ?></td>
              <td>
-              <a href="<?php echo site_url('/registroMascota/editar01Formulario'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a>
+              <a href="<?php echo site_url('/registromascota-editar/'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a><br><br>
+              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg->id);?>" class="btn btn-danger btn-sm">Eliminar</a>
               </td>
           </tr>
          <?php endforeach; ?>
