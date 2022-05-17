@@ -119,7 +119,7 @@ public function editar01Formulario($id){
     public function editar02Continuar(){
         // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
         $unRegistro = new RegistroMascotaEntity();
-        $unRegistro->usuario_id =  $this->request->getVar('usuarioRegistro_id');
+        $unRegistro->usuario_id =  $this->request->getVar('usuario_id');
         $unRegistro->telefono1 =  $this->request->getVar('telefono1');
         $unRegistro->telefono2 =  $this->request->getVar('telefono2');
         $unRegistro->nombreMascota =  $this->request->getVar('nombreMascota');
@@ -146,7 +146,7 @@ public function editar01Formulario($id){
     public function eliminar02Continuar(){
         // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
        $unRegistro = new RegistroMascotaEntity();
-         $unRegistro->id = $this->request->getVar('id');
+         $unRegistro->id = $this->request->getVar('usuario_id');
          // Obtenemos la clase del Model que controla los conciertos
          $mod = new registroMascotaModel();
          // Mandamos la Transacciòn ala Base de DAtos
