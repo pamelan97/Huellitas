@@ -80,7 +80,14 @@ class registroMascotaModel extends Model
 
     }
 
+    public function unicos(Int $id){
+        $unBuilder = $this->builder();
+        // Que el correo sea el valor que quiero
+        $unBuilder->where('usuarioRegistro_id',$id); //
+        $consulta = $unBuilder->get();
+        return $consulta->getCustomResultObject('App\Entities\RegistroMascotaEntity');
 
+    }
 
     public function soloConA(){
 

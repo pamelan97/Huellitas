@@ -36,66 +36,7 @@ class registroModel extends Model
 
     public function actualziar (Registro $unRegistro){
 
-        /*
-
-        // Escribiendo la consulta via "keys"
-
-        $sql_update = "update conciertos set concierto_nombre = :nombre:, concierto_ubicacion= :ubicacion: where concierto_id =:id:";
-
-        $parametros = [
-
-            'nombre' => $unConcierto->nombre,
-
-            'ubicacion' => $unConcierto->ubicacion,
-
-            'id' => $unConcierto->id
-
-        ]
-
-        ;
-
-        if (!
-
-            $this->db->query(
-
-                $sql_update,
-
-                $parametros
-
-            )
-
-        ) {
-
-            $error = $db->error();
-
-            error_log($error);
-
-        }
-
-       
-
-        */
-   /*
-
-        // Aplicando el SQL Builder
-
-        $parametros = [
-
-            'concierto_nombre' => $unConcierto->nombre,
-
-            'concierto_ubicacion' => $unConcierto->ubicacion
-
-        ]
-
-        ;
-
-        $this->where('concierto_id',$unConcierto->id)
-
-            ->set($parametros)
-
-            ->update();
-
-        */  
+    
 
 
 

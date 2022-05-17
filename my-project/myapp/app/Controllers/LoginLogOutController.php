@@ -13,7 +13,8 @@ public function index(){
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroMascotaModel();
     // Buscamos los conciertos
-    $mascotas = $mod->todEs();
+    session_start ();
+    $mascotas = $mod->unicos($_SESSION['USR']->id);
     // UN EJEMPLO PARA MAS ADELANTE
     //$conciertos = $mod->soloConA();
     

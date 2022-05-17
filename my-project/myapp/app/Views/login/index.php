@@ -1,6 +1,7 @@
 <?php session_start () ?>
 <?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
+<?= $_SESSION['USR']->id ?>
 
 <div class="d-flex justify-content-end">
         <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agregar Mascota</a>
