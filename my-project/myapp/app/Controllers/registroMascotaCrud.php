@@ -4,8 +4,10 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 //
 use App\Entities\RegistroMascotaEntity;
+use App\Models\generoModel;
+use App\Models\tamanoModel;
+use App\Models\razaModel;
 use App\Models\registroMascotaModel;
-use App\Entities\PlacasEntities;
 use App\Models\PlacasMascotasModel;
 //
 class registroMascotaCrud extends BaseController
@@ -42,12 +44,28 @@ public function ver($id){
 }
 
 public function agregar01Mascota(){
-    return view('registromascota/agregar01Mascota');
+
+    $modgenero = new generoModel();
+    $generos = $modgenero->todos();
+    $data['generos'] = $generos;
+
+
+    $modraza = new razaModel();
+    $razas = $modraza->todos();
+    $data['razas'] = $razas;
+
+
+
+    $modtamano = new tamanoModel();
+    $tamanos = $modtamano->todos();
+    $data['tamanos'] = $tamanos;
+
+
+    return view('registromascota/agregar01Mascota', $data);
 }
 
 public function agregar01Placa($placa_id){
     $data['placa_id'] = $placa_id;
-    
     // modelo de placas para ver si esta asociada a un usuario
     $mod = new PlacasMascotasModel();
     $placa = $mod->getPlaca($placa_id); //obtener el dieño de una placa

@@ -23,33 +23,57 @@
       <label>Ingrese la fecha de nacimiento de su mascota</label>
       <input type="date" name="fechaMascota" class="form-control" required />
     </div>
-    <div class="form-group">
-      <label>Ingrese la raza de su mascota</label>
-      <input type="text" name="razaMascota" class="form-control" required />
-    </div>
+
+
+
+    <p>
+      <label for="Raza"> Seleccione la raza de su mascota:</label>
+
+      <select name="razaMascota">
+
+        <?php
+
+        foreach ($razas as $raza) {
+
+          echo '<option value="' + $raza->id_raza + '">' + $raza->descripcion + '</option>';
+        }
+
+        ?>
+    </p>
+
+
+
+
 <p>
-  <label for="Tamano"> Ingresa el tamaño de tu mascota:</label>
+  </select>
+
+  <label for="Tamano"> Seleccione el tamaño de tu mascota:</label>
 
   <select name="tamanoMascota">
-    <option value="Pequena">Raza pequeña</option>
-    <option value="Mediana">Raza Mediana</option>
-    <option value="Grande">Raza Grande</option>
+    <option value="1">Raza pequeña</option>
+    <option value="2">Raza Mediana</option>
+    <option value="3">Raza Grande</option>
   </select>
 </p>
 
+
+
 <p>
-  <label for="Genero"> Ingresa el genero de tu mascota:</label>
+  <label for="Genero"> Seleccione el genero de tu mascota:</label>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Macho">
+  <input type="radio" name="generoMascota" value="1">
   "Macho"
   <br>
 </p>
 <p>
-  <input type="radio" name="generoMascota" value="Hembra">
+  <input type="radio" name="generoMascota" value="2">
   "Hembra"
   <br>
 </p>
+
+
+
 <div class="form-group">
   <button type="submit" class="btn btn-primary btn-sm">REGISTRAR DATOS DE MASCOTA</button>
   <a href="<?php echo site_url('######'); ?>" class="btn btn-secondary btn-sm">Cancelar</a>

@@ -49,15 +49,6 @@ class UsuarioModel extends Model
 }
 
 
-    
-     // public function usuarioPorclave($unaClave){
-        // Instancia de builder SQL
-        // $unBuilder = $this->builder();
-        // Que el correo sea el valor que quiero
-       //  $unBuilder->where('usuario_clave',$unaClave); // 
-        // $consulta = $unBuilder->get();
-        // return $consulta->getCustomResultObject('App\Entities\UsuarioEntity');
-   // } 
 
 
 
