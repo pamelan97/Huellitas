@@ -35,50 +35,60 @@
 
         foreach ($razas as $raza) {
 
-          echo '<option value="' + $raza->id_raza + '">' + $raza->descripcion + '</option>';
-        }
+        ?><option value="<?= $raza->raza_id ?>"><?= $raza->descripcion ?></option><?php
+                                                                                }
 
-        ?>
+      ?>
+      </select>
     </p>
 
 
 
 
-<p>
-  </select>
+    <p>
+      <label for="Tamano"> Seleccione el tamaño de su mascota:</label>
 
-  <label for="Tamano"> Seleccione el tamaño de tu mascota:</label>
+      <select name="tamanoMascota">
 
-  <select name="tamanoMascota">
-    <option value="1">Raza pequeña</option>
-    <option value="2">Raza Mediana</option>
-    <option value="3">Raza Grande</option>
-  </select>
-</p>
+        <?php
 
+        foreach ($tamanos as $tamano) {
 
+        ?><option value="<?= $tamano->tamano_id ?>"><?= $tamano->descripcion ?></option><?php
+                                                                                      }
 
-<p>
-  <label for="Genero"> Seleccione el genero de tu mascota:</label>
-</p>
-<p>
-  <input type="radio" name="generoMascota" value="1">
-  "Macho"
-  <br>
-</p>
-<p>
-  <input type="radio" name="generoMascota" value="2">
-  "Hembra"
-  <br>
-</p>
+      ?>
+      </select>
+    </p>
 
 
+    <p>
+      <label for="Genero"> Seleccione el genero de tu mascota:</label>
+    </p>
+    <?php
 
-<div class="form-group">
-  <button type="submit" class="btn btn-primary btn-sm">REGISTRAR DATOS DE MASCOTA</button>
-  <a href="<?php echo site_url('######'); ?>" class="btn btn-secondary btn-sm">Cancelar</a>
-</div>
-</form>
+    foreach ($generos as $genero) {
+
+    ?>
+      <p>
+        <input type="radio" name="generoMascota" value="<?= $genero->genero_id ?>">
+        <?= $genero->descripcion ?>
+        <br>
+      </p>
+    <?php
+
+    }
+
+    ?>
+
+
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-sm">REGISTRAR DATOS DE MASCOTA</button>
+      <a href="<?php echo site_url('######'); ?>" class="btn btn-secondary btn-sm">Cancelar</a>
+    </div>
+  </form>
 </div>
 
 

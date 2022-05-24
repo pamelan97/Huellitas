@@ -6,6 +6,9 @@ use CodeIgniter\Controller;
 use App\Models\registroModel;
 use App\Entities\Registro;
 use App\Models\UsuarioModel;
+use App\Models\razaModel;
+use App\Models\tamanoModel;
+use App\Models\generoModel;
 //
 class registroCrud extends Controller
 {
@@ -53,8 +56,34 @@ public function agregar02Continuar(){
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroModel();
     // MAndamos la Transacciòn ala Base de DAtos
-    $mod->save($unRegistro);
+    $id=$mod->insert($unRegistro);
     //
+    session_start();
+    $mod2= new UsuarioModel();
+    $usuario=$mod2->unUsuario($id);
+    $_SESSION['USR']=$usuario;
+    $placa=$_SESSION['PLACA'];
+    if($placa){
+
+        $modgenero = new generoModel();
+        $generos = $modgenero->todos();
+        $data['generos'] = $generos;
+    
+    
+        $modraza = new razaModel();
+        $razas = $modraza->todos();
+        $data['razas'] = $razas;
+    
+    
+    
+        $modtamano = new tamanoModel();
+        $tamanos = $modtamano->todos();
+        $data['tamanos'] = $tamanos;
+
+        return view('placasmascotas/agregar01Placa', $data);
+        
+    }
+    else
     return $this->index(); //TENGO QUE PONER UN IF, IF LA PLACA PENIDENTE ES DISTINTA DE NULL
    
     }

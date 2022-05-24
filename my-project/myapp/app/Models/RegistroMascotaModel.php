@@ -68,7 +68,7 @@ class registroMascotaModel extends Model
     public function unaMascota(Int $id){
         $unaMascota = $this->builder();
 
-        $unaMascota->where('usuarioRegistro_id',$id); //la mascota del dueño id
+        $unaMascota->where('id',$id); //la mascota del dueño id
 
         $consulta = $unaMascota->get();
         return $consulta->getCustomResultObject('App\Entities\RegistroMascotaEntity');
