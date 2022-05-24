@@ -13,7 +13,7 @@ class tamanoModel extends Model
     protected $returnType = 'App\Entities\tamanoEntity'; 
 
     public function  eliminar(tamanoEntity $unTamano){
-        $this->delete($unTamano->id);
+        $this->delete($unTamano->tamano_id);
     }
 
     public function actualziar (tamanoEntity $unTamano){
@@ -22,7 +22,7 @@ class tamanoModel extends Model
         ]
         ;
 
-        $this->update($unTamano->id,$parametros);
+        $this->update($unTamano->tamano_id,$parametros);
     }
 
     public function todos(){
@@ -31,9 +31,3 @@ class tamanoModel extends Model
      }
 
 }
-
-
-
-
-
-

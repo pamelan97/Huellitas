@@ -5,6 +5,9 @@ namespace App\Controllers;
 use App\Models\UsuarioModel;
 use CodeIgniter\Throttle\ThrottlerInterface;
 use App\Entities\RegistroMascotaEntity;
+use App\Models\razaModel;
+use App\Models\tamanoModel;
+use App\Models\generoModel;
 use App\Models\registroMascotaModel;
 //
 class LoginLogOutController extends BaseController
@@ -36,6 +39,25 @@ public function index(){
 
     public function login02Validar()
     {
+
+
+        
+        $modgenero = new generoModel();
+        $generos = $modgenero->todos();
+        $data['generos'] = $generos;
+    
+    
+        $modraza = new razaModel();
+        $razas = $modraza->todos();
+        $data['razas'] = $razas;
+    
+    
+    
+        $modtamano = new tamanoModel();
+        $tamanos = $modtamano->todos();
+        $data['tamanos'] = $tamanos;
+
+
         // Como debe funcioanr-
         // ** Recueprar los datos
         $unCorreo = $_POST["el_correo"];
@@ -62,7 +84,7 @@ public function index(){
 
         if($placa){
 
-            return view('placasmascotas/agregar01Placa'); //si tenmeos placa pendiente se registra mascota
+            return view('placasmascotas/agregar01Placa', $data); //si tenmeos placa pendiente se registra mascota
         }
         else{
         
@@ -91,4 +113,3 @@ public function index(){
     }
 
 }
-

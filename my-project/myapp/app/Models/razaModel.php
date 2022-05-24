@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 namespace App\Models;
 use CodeIgniter\Model;
 use App\Entities\razaEntity;
@@ -13,7 +13,7 @@ class razaModel extends Model
     protected $returnType = 'App\Entities\razaEntity'; 
 
     public function  eliminar(razaEntity $unRaza){
-        $this->delete($unRaza->id);
+        $this->delete($unRaza->raza_id);
     }
 
     public function actualziar (razaEntity $unRaza){
@@ -22,7 +22,7 @@ class razaModel extends Model
         ]
         ;
 
-        $this->update($unRaza->id,$parametros);
+        $this->update($unRaza->raza_id,$parametros);
     }
 
 
@@ -32,9 +32,3 @@ class razaModel extends Model
      }
 
 }
-
-
-
-
-
-

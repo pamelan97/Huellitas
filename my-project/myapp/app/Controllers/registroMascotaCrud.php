@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 //
 use App\Entities\RegistroMascotaEntity;
+use App\Entities\PlacasEntities;
 use App\Models\generoModel;
 use App\Models\tamanoModel;
 use App\Models\razaModel;
@@ -16,7 +17,8 @@ public function index(){
     // Obtenemos la clase del Model que controla los conciertos
     $mod = new registroMascotaModel();
     // Buscamos los conciertos
-    $mascotas = $mod->todEs();
+    session_start ();
+    $mascotas = $mod->unicos($_SESSION['USR']->id);
     // UN EJEMPLO PARA MAS ADELANTE
     //$conciertos = $mod->soloConA();
     
@@ -97,7 +99,17 @@ public function agregar02PlacaMascota(){
    // Obtenemos la clase del Model que controla los conciertos
    $mod = new registroMascotaModel();
    // MAndamos la Transacciòn ala Base de DAtos
-   $mod->save($unRegistro);
+   $id=$mod->insert($unRegistro);
+
+
+   
+   $otroRegistro = new PlacasEntities();
+   $otroRegistro->idMascotas =  $id;
+   $otroRegistro->id =  $this->request->getVar('placaId');
+
+   $mod2 = new PlacasMascotasModel();
+   // MAndamos la Transacciòn ala Base de DAtos
+   $mod2->save($otroRegistro);
    //
    return $this->index();
    

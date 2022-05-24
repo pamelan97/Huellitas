@@ -13,7 +13,7 @@ class generoModel extends Model
     protected $returnType = 'App\Entities\generoEntity'; 
 
     public function  eliminar(generoEntity $unGenero){
-        $this->delete($unGenero->id);
+        $this->delete($unGenero->genero_id);
     }
 
     public function actualziar (generoEntity $unGenero){
@@ -22,7 +22,7 @@ class generoModel extends Model
         ]
         ;
 
-        $this->update($unGenero->id,$parametros);
+        $this->update($unGenero->genero_id,$parametros);
     }
  
 
@@ -32,9 +32,3 @@ class generoModel extends Model
      }
 
 }
-
-
-
-
-
-

@@ -2,33 +2,53 @@
 
 namespace App\Controllers;
 
-use App\Entities\PlacasEntities;
 use App\Models\PlacasMascotasModel;
 use App\Models\registroMascotaModel;
+use App\Models\razaModel;
+use App\Models\tamanoModel;
+use App\Models\generoModel;
 
 class PlacasController extends BaseController
 {
     public function registroplaca($idPlaca)
     {
+
+        $modgenero = new generoModel();
+        $generos = $modgenero->todos();
+        $data['generos'] = $generos;
+    
+    
+        $modraza = new razaModel();
+        $razas = $modraza->todos();
+        $data['razas'] = $razas;
+    
+    
+    
+        $modtamano = new tamanoModel();
+        $tamanos = $modtamano->todos();
+        $data['tamanos'] = $tamanos;
+
+
         $model = new PlacasMascotasModel();
         $placaMascota = $model->getPlaca($idPlaca);
         session_start();
          $_SESSION['PLACA']= $placaMascota;
 
-        if ($placaMascota->usuarioRegistro_id){
+        if ($placaMascota->idMascotas){
                 // cpnsultar datos de la mascota registrada para ese usr
                 $mod2 = new registroMascotaModel();
-                $mascota = $mod2->unaMascota($placaMascota->usuarioRegistro_id);
+                $mascota = $mod2->unaMascota($placaMascota->idMascotas);
                 $data['registro'] = $mascota;
+
             
-            return view('placasmascotas/agregar01Placa', $data);
+           return view('placasmascotas/agregar01Placa', $data);
         }
         else {
             $usuario=$_SESSION['USR'];
         
         if($usuario){
 
-            return view('placasmascotas/agregar01Placa'); //es cuando existe el usuario esta autenticado
+            return view('placasmascotas/agregar01Placa', $data); //es cuando existe el usuario esta autenticado
         }
         else{
             
