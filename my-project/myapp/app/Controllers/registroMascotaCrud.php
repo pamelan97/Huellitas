@@ -141,7 +141,24 @@ public function agregar02Mascota(){
 }
 
 public function editar01Formulario($id){
+
     $data = $this->recuperauser($id);
+
+    $modgenero = new generoModel();
+    $generos = $modgenero->todos();
+    $data['generos'] = $generos;
+
+
+    $modraza = new razaModel();
+    $razas = $modraza->todos();
+    $data['razas'] = $razas;
+
+
+
+    $modtamano = new tamanoModel();
+    $tamanos = $modtamano->todos();
+    $data['tamanos'] = $tamanos;
+
      //Vamos a la vista
      return view('registromascota/editar01Formulario',$data);
     }
@@ -149,6 +166,7 @@ public function editar01Formulario($id){
     public function editar02Continuar(){
         // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
         $unRegistro = new RegistroMascotaEntity();
+        $unRegistro->id =  $this->request->getVar('id');
         $unRegistro->usuario_id =  $this->request->getVar('usuario_id');
         $unRegistro->telefono1 =  $this->request->getVar('telefono1');
         $unRegistro->telefono2 =  $this->request->getVar('telefono2');
@@ -165,7 +183,25 @@ public function editar01Formulario($id){
         // vuelve al inicio
        return $this->index();
     }
-    
+
+    public function estadoMascotas($id){
+        $data = $this->recuperauser($id);
+        $mascota = $data['registro'];
+
+        if($mascota -> estadoMascotas == 1){
+            $mascota -> estadoMascotas = 2;
+        }
+        else {
+            $mascota -> estadoMascotas = 1;
+        }
+
+        $mod = new registroMascotaModel();
+        // Mandamos la Transacciòn ala Base de DAtos
+        $mod->actualziar($mascota);
+
+        return $this->index();
+
+    }
     
     public function eliminar01Formulario($id){
         $data = $this->recuperauser($id);

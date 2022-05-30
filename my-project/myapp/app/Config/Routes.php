@@ -60,6 +60,7 @@ $routes->add('login-logout', 'LoginLogOutController::logout');
 $routes->add('registromascota', 'registroMascotaCrud::agregar01Mascota');
 $routes->add('registroduenodos', 'registroDuenodosCrud::agregar01Dueno');
 $routes->add('registroplaca/(:num)', 'PlacasController::registroplaca/$1');
+$routes->add('mascotaperdida/(:num)', 'registroMascotaCrud::estadoMascotas/$1');
 
 
 // CRUD

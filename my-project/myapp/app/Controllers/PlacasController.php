@@ -41,7 +41,7 @@ class PlacasController extends BaseController
                 $data['registro'] = $mascota;
 
             
-           return view('placasmascotas/agregar01Placa', $data);
+           return view('estadomascota/mascotasaludo', $data);
         }
         else {
             $usuario=$_SESSION['USR'];
