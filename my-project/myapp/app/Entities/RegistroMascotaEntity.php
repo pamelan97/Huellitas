@@ -36,6 +36,7 @@ class RegistroMascotaEntity extends Entity
 
         "generoMascota" => "usuario_genero_mascota",
      
+        "estadoMascotas" => "estadoMascotas"
 
     ];
 

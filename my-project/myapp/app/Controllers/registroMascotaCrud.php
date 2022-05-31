@@ -175,6 +175,7 @@ public function editar01Formulario($id){
         $unRegistro->razaMascota =  $this->request->getVar('razaMascota');
         $unRegistro->tamanoMascota =  $this->request->getVar('tamanoMascota');
         $unRegistro->generoMascota =  $this->request->getVar('generoMascota');
+        $unRegistro->estadoMascotas =  $this->request->getVar('estadoMascotas');
     
         // Obtenemos la clase del Model que controla los conciertos
         $mod = new registroMascotaModel();
@@ -205,6 +206,22 @@ public function editar01Formulario($id){
     
     public function eliminar01Formulario($id){
         $data = $this->recuperauser($id);
+
+        $modgenero = new generoModel();
+        $generos = $modgenero->todos();
+        $data['generos'] = $generos;
+    
+    
+        $modraza = new razaModel();
+        $razas = $modraza->todos();
+        $data['razas'] = $razas;
+    
+    
+    
+        $modtamano = new tamanoModel();
+        $tamanos = $modtamano->todos();
+        $data['tamanos'] = $tamanos;
+        
         //Vamos a la vista
         return view('registromascota/eliminar',$data);
     }
@@ -225,3 +242,4 @@ public function editar01Formulario($id){
         return $this->index();
      }
     }
+    

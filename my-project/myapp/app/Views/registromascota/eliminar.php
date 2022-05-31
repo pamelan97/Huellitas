@@ -8,7 +8,9 @@
 
 <div class="container mt-5">
     <form method="post" id="add_create" name="add_create" action="<?= site_url('/registromascota-elimnar-continuar/') ?>">
-	  <input type="hidden" name="usuario_id" value="<?php echo($registro->id);?>"/>
+    <input type="hidden" name="usuario_id" value="<?php echo($registro->usuario_id);?>"/>
+    <input type="hidden" name="id" value="<?php echo($registro->id);?>"/>
+    <input type="hidden" name="estadoMascotas" value="<?php echo($registro->estadoMascotas);?>"/>
       <div class="form-group">
         <label>Primer contacto telefonico: </label> <?php echo($registro->telefono1); ?>
       </div>
@@ -23,6 +25,12 @@
       </div>
       <div class="form-group">
         <label>Raza de la mascota: </label> <?php echo($registro->razaMascota); ?>
+      </div>
+      <div class="form-group">
+        <label>Genero de la mascota: </label> <?php echo($registro->generoMascota); ?>
+      </div>
+      <div class="form-group">
+        <label>Tamaño de la mascota: </label> <?php echo($registro->tamanoMascota); ?>
       </div>
       <div class="form-group">
       <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
