@@ -30,7 +30,3 @@ class PlacasEntities extends Entity
 }
 
 ?>
-
-}
-
-?>

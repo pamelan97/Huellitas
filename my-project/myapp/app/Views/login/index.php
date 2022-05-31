@@ -45,7 +45,8 @@
              <td><?php echo $reg->telefono2; ?></td>
              <td>
               <a href="<?php echo site_url('/registromascota-editar/'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a><br><br>
-              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg->id);?>" class="btn btn-danger btn-sm">Eliminar</a>
+              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg->id);?>" class="btn btn-danger btn-sm">Eliminar</a><br><br>
+              <a href="<?php echo site_url('/mascotaperdida/'.$reg->id);?>" class="btn btn-warning btn-sm"><?= ($reg->estadoMascotas==1?'Mascota Encontrada':'Mascota Perdida') ?></a><br><br>
               </td>
           </tr>
          <?php endforeach; ?>
