@@ -3,8 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\UsuarioModel;
-use CodeIgniter\Throttle\ThrottlerInterface;
-use App\Entities\RegistroMascotaEntity;
 use App\Models\razaModel;
 use App\Models\tamanoModel;
 use App\Models\generoModel;

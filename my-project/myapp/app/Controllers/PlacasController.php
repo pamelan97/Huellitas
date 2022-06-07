@@ -7,6 +7,7 @@ use App\Models\registroMascotaModel;
 use App\Models\razaModel;
 use App\Models\tamanoModel;
 use App\Models\generoModel;
+use App\Models\mensajeMascotaModel;
 
 class PlacasController extends BaseController
 {
@@ -27,6 +28,10 @@ class PlacasController extends BaseController
         $modtamano = new tamanoModel();
         $tamanos = $modtamano->todos();
         $data['tamanos'] = $tamanos;
+
+        $modmensaje = new mensajeMascotaModel();
+        $mensajes = $modmensaje->todos();
+        $data['mensaje'] = $mensajes;
 
 
         $model = new PlacasMascotasModel();

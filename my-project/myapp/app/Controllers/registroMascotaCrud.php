@@ -1,8 +1,6 @@
 <?php 
 namespace App\Controllers;
 //
-use CodeIgniter\Controller;
-//
 use App\Entities\RegistroMascotaEntity;
 use App\Entities\PlacasEntities;
 use App\Models\generoModel;
@@ -10,6 +8,8 @@ use App\Models\tamanoModel;
 use App\Models\razaModel;
 use App\Models\registroMascotaModel;
 use App\Models\PlacasMascotasModel;
+use App\Entities\mensajeMascotaEntity;
+use App\Models\mensajeMascotaModel;
 //
 class registroMascotaCrud extends BaseController
 {
@@ -23,7 +23,19 @@ public function index(){
     //$conciertos = $mod->soloConA();
     
     // Ponemos en la 'data transiente' la data que queremos mostrar
-    $data['registros'] = $mascotas;
+    //$data['registros'] = $mascotas;
+
+    $mod2 = new mensajeMascotaModel();
+    
+    foreach($mascotas as $mascota){
+        $unMensaje = $mod2->ultimomensaje($mascota->id);
+
+        $datamascota['mascota']=$mascota;
+        $datamascota['mensaje']=$unMensaje;
+        $data['registros'][]=$datamascota;
+    }
+
+
     // Vamos a la vista ... pero con los datos!!!
     return view('login/index',$data);
 }
@@ -66,6 +78,25 @@ public function agregar01Mascota(){
     return view('registromascota/agregar01Mascota', $data);
 }
 
+    public function enviarMensaje(){
+
+        $unMensaje = new mensajeMascotaEntity();
+        $unMensaje->mascota_id =  $this->request->getVar('mascota_id');
+        $unMensaje->nombre =  $this->request->getVar('nombre');
+        $unMensaje->telefono =  $this->request->getVar('telefono');
+        $unMensaje->mensaje =  $this->request->getVar('mensaje');
+        
+        
+     
+        // Obtenemos la clase del Model que controla los conciertos
+        $mod = new mensajeMascotaModel();
+        // MAndamos la Transacciòn ala Base de DAtos
+        $mod->insert($unMensaje);
+    
+        return view('estadomascota/mascotasaludo');
+     
+}
+
 public function agregar01Placa($placa_id){
     $data['placa_id'] = $placa_id;
     // modelo de placas para ver si esta asociada a un usuario
@@ -73,10 +104,10 @@ public function agregar01Placa($placa_id){
     $placa = $mod->getPlaca($placa_id); //obtener el dieño de una placa
     $data['placa'] = $placa;
 
-    if ($placa->usuarioRegistro_id){
+    if ($placa->registroMascota_id){
         // cpnsultar datos de la mascota registrada para ese usr
         $mod2 = new registroMascotaModel();
-        $mascota = $mod2->unaMascota($placa->usuarioRegistro_id);
+        $mascota = $mod2->unaMascota($placa->registroMascota_id);
         $data['registro'] = $mascota;
     }
     return view('placasmascotas/agregar01Placa', $data);
@@ -206,22 +237,6 @@ public function editar01Formulario($id){
     
     public function eliminar01Formulario($id){
         $data = $this->recuperauser($id);
-
-        $modgenero = new generoModel();
-        $generos = $modgenero->todos();
-        $data['generos'] = $generos;
-    
-    
-        $modraza = new razaModel();
-        $razas = $modraza->todos();
-        $data['razas'] = $razas;
-    
-    
-    
-        $modtamano = new tamanoModel();
-        $tamanos = $modtamano->todos();
-        $data['tamanos'] = $tamanos;
-        
         //Vamos a la vista
         return view('registromascota/eliminar',$data);
     }
@@ -229,7 +244,7 @@ public function editar01Formulario($id){
     public function eliminar02Continuar(){
         // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
        $unRegistro = new RegistroMascotaEntity();
-         $unRegistro->id = $this->request->getVar('usuario_id');
+         $unRegistro->id = $this->request->getVar('id');
          // Obtenemos la clase del Model que controla los conciertos
          $mod = new registroMascotaModel();
          // Mandamos la Transacciòn ala Base de DAtos
@@ -242,4 +257,3 @@ public function editar01Formulario($id){
         return $this->index();
      }
     }
-    

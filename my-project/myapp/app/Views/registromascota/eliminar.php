@@ -1,6 +1,3 @@
-<a href="<?php echo site_url('/registromascota-cancelar/');?>" class="btn btn-secondary btn-sm">Cancelar</a>
-
-
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
