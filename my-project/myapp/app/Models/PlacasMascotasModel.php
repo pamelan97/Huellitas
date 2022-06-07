@@ -16,7 +16,7 @@ class PlacasMascotasModel extends Model
 
    
 
-    protected $allowedFields = ['placasMascotas_id', 'usuarioRegistro_id',];
+    protected $allowedFields = ['placasMascotas_id', 'registroMascota_id',];
 
 
 
@@ -32,41 +32,4 @@ class PlacasMascotasModel extends Model
         $this->delete($unRegistro->id);
 
     }
-
-
-
-    public function actualziar (PlacasEntities $unRegistro){
-
-
-
-         $parametros = [
-
-            'placasMascotas_id' => $unRegistro->id,
-
-            'usuarioRegistro_id' => $unRegistro->idMascotas,          
-
-        ]
-
-        ;
-
-
-
-        $this->update($unRegistro->id,$parametros);
-
-    }
-
-
-
-    public function todEs(){
-
-        return $this->orderBy('placasMascotas_id', 'DESC')->findAll(); 
-
-    }
-
-    public function getPlaca($pk){// vamos a obtener una infromacion de la placa 
-            $unaPlaca = $this->find($pk);
-            return $unaPlaca;
-        } 
-}
-
-?>
+    

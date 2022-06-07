@@ -20,7 +20,7 @@ class RegistroMascotaEntity extends Entity
 
         "id" => "id",
         
-        "usuario_id" => "usuarioRegistro_id",
+        "usuario_id" => "registroMascota_id",
 
         "telefono1" => "usuario_telefono1",
 
@@ -47,3 +47,4 @@ class RegistroMascotaEntity extends Entity
 }
 
 ?>
+

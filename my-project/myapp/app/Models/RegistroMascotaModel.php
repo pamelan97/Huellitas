@@ -10,13 +10,13 @@ class registroMascotaModel extends Model
 
 {
 
-    protected $table = 'usuarioRegistro1';
+    protected $table = 'registroMascota';
 
     protected $primaryKey = 'id';
 
    
 
-    protected $allowedFields = ['usuarioRegistro_id', 'usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota','usuario_tamano_mascota','usuario_genero_mascota', 'estadoMascotas'];
+    protected $allowedFields = ['registroMascota_id', 'usuario_telefono1', 'usuario_telefono2', 'usuario_nombre_mascota' , 'usuario_nacimiento_mascota', 'usuario_raza_mascota','usuario_tamano_mascota','usuario_genero_mascota', 'estadoMascotas'];
 
 
 
@@ -39,7 +39,7 @@ class registroMascotaModel extends Model
 
 
          $parametros = [
-            'usuarioRegistro_id' => $unRegistro->usuario_id,
+            'registroMascota_id' => $unRegistro->usuario_id,
 
             'usuario_telefono1' => $unRegistro->telefono1,
 
@@ -85,7 +85,7 @@ class registroMascotaModel extends Model
     public function unicos(Int $id){
         $unBuilder = $this->builder();
         // Que el correo sea el valor que quiero
-        $unBuilder->where('usuarioRegistro_id',$id); //
+        $unBuilder->where('registroMascota_id',$id); //
         $consulta = $unBuilder->get();
         return $consulta->getCustomResultObject('App\Entities\RegistroMascotaEntity');
 

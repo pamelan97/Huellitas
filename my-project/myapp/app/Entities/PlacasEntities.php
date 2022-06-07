@@ -19,7 +19,7 @@ class PlacasEntities extends Entity
     protected $datamap = [
 
         "id" => "placasMascotas_id",
-        "idMascotas" => "usuarioRegistro_id",
+        "idMascotas" => "registroMascota_id",
 
     ];
 
