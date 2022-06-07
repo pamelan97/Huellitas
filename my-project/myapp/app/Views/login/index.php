@@ -35,19 +35,22 @@
           <?php if($registros): ?>
           <?php foreach($registros as $reg): ?>
           <tr>
-             <td><?php echo $reg->id; ?></td>
-             <td><?php echo $reg->nombreMascota; ?></td>
-             <td><?php echo $reg->fechaMascota; ?></td>
-             <td><?php echo $reg->razaMascota; ?></td>
-             <td><?php echo $reg->tamanoMascota; ?></td>
-             <td><?php echo $reg->generoMascota; ?></td>
-             <td><?php echo $reg->telefono1; ?></td>
-             <td><?php echo $reg->telefono2; ?></td>
+             <td><?php echo $reg['mascota']->id; ?></td>
+             <td><?php echo $reg['mascota']->nombreMascota; ?></td>
+             <td><?php echo $reg['mascota']->fechaMascota; ?></td>
+             <td><?php echo $reg['mascota']->razaMascota; ?></td>
+             <td><?php echo $reg['mascota']->tamanoMascota; ?></td>
+             <td><?php echo $reg['mascota']->generoMascota; ?></td>
+             <td><?php echo $reg['mascota']->telefono1; ?></td>
+             <td><?php echo $reg['mascota']->telefono2; ?></td>
              <td>
-              <a href="<?php echo site_url('/registromascota-editar/'.$reg->id);?>" class="btn btn-primary btn-sm">Editar</a><br><br>
-              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg->id);?>" class="btn btn-danger btn-sm">Eliminar</a><br><br>
-              <a href="<?php echo site_url('/mascotaperdida/'.$reg->id);?>" class="btn btn-warning btn-sm"><?= ($reg->estadoMascotas==1?'Mascota Encontrada':'Mascota Perdida') ?></a><br><br>
-              </td>
+              <a href="<?php echo site_url('/registromascota-editar/'.$reg['mascota']->id);?>" class="btn btn-primary btn-sm">Editar</a><br><br>
+              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg['mascota']->id);?>" class="btn btn-danger btn-sm">Eliminar</a><br><br>
+              <a href="<?php echo site_url('/mascotaperdida/'.$reg['mascota']->id);?>" class="btn btn-warning btn-sm"><?= ($reg['mascota']->estadoMascotas==1?'Mascota Encontrada':'Mascota Perdida') ?></a><br><br>
+              <?php if($reg['mensaje']):?>
+              <a href="#" onclick="alert('<?= 'Te informamos que ' .$reg['mensaje']->nombre. ', acaba de encontrar a tu mascota, te dejo el siguiente mensaje: ' .$reg['mensaje']->mensaje. ', junto a su número de contacto: ' .$reg['mensaje']->telefono. ', ¡Ponte en contacto pronto!' ?>')" class="btn btn btn-info btn-sm">¡Tienes un mensaje!</a><br><br>  
+              <?php endif; ?>
+            </td>
           </tr>
          <?php endforeach; ?>
          <?php endif; ?>
