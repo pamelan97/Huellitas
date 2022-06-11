@@ -1,4 +1,3 @@
-
 <?= $this->extend('formaStandar') ?>
 
 <?= $this->section('contenido') ?>
@@ -9,10 +8,14 @@
       <div class="form-group">
         <label>Ingrese su correo electrónico</label>
         <input type="email" name="correo" class="form-control" required/>
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
       </div>
       <div class="form-group">
         <label>Cree una contraseña:</label>
         <input type="password" name="clave" class="form-control" required/>
+        <div id="passwordHelpBlock" class="form-text">
+        Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
+      </div>
       </div>
       <div class="form-group">
       <button type="submit" class="btn btn-primary btn-sm">REGISTRAR</button>

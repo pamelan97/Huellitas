@@ -2,8 +2,12 @@
 <?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 
-<div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-success mb-2">Agregar Mascota</a>
+<div class="d-flex justify-content-end ">
+        <a href="<?php echo site_url('/registromascota') ?>" class="btn btn-outline-success">Agregar Mascota</a>      
+	</div><br>
+  <div class="d-flex justify-content-end ">
+  <a href="<?php echo site_url('/registromascotaindex') ?>" class="btn btn-outline-info">Refrescar</a>
+        
 	</div>
 <div class="mt-3">
      <table class="table table-bordered" id="users-list">
@@ -44,8 +48,8 @@
              <td><?php echo $reg['mascota']->telefono1; ?></td>
              <td><?php echo $reg['mascota']->telefono2; ?></td>
              <td>
-              <a href="<?php echo site_url('/registromascota-editar/'.$reg['mascota']->id);?>" class="btn btn-primary btn-sm">Editar</a><br><br>
-              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg['mascota']->id);?>" class="btn btn-danger btn-sm">Eliminar</a><br><br>
+              <a href="<?php echo site_url('/registromascota-editar/'.$reg['mascota']->id);?>" class="btn btn-outline-primary">Editar</a><br><br>
+              <a href="<?php echo site_url('/registromascota-eliminar/'.$reg['mascota']->id);?>" class="btn btn-outline-danger">Eliminar</a><br><br>
               <a href="<?php echo site_url('/mascotaperdida/'.$reg['mascota']->id);?>" class="btn btn-warning btn-sm"><?= ($reg['mascota']->estadoMascotas==1?'Mascota Encontrada':'Mascota Perdida') ?></a><br><br>
               <?php if($reg['mensaje']):?>
               <a href="#" onclick="alert('<?= 'Te informamos que ' .$reg['mensaje']->nombre. ', acaba de encontrar a tu mascota, te dejo el siguiente mensaje: ' .$reg['mensaje']->mensaje. ', junto a su número de contacto: ' .$reg['mensaje']->telefono. ', ¡Ponte en contacto pronto!' ?>')" class="btn btn btn-info btn-sm">¡Tienes un mensaje!</a><br><br>  
