@@ -18,6 +18,8 @@ class mensajeMascotaEntity extends Entity
 
     protected $datamap = [
 
+        "estado_id" => "estadoMensaje",
+
         "mensaje_id" => "mensaje_id",
 
         "mascota_id" => "mascota_id",

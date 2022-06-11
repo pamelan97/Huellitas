@@ -85,15 +85,17 @@ public function agregar01Mascota(){
         $unMensaje->nombre =  $this->request->getVar('nombre');
         $unMensaje->telefono =  $this->request->getVar('telefono');
         $unMensaje->mensaje =  $this->request->getVar('mensaje');
-        
-        
+
+        $unMensaje->estado_id =  1;
+
+  
      
         // Obtenemos la clase del Model que controla los conciertos
         $mod = new mensajeMascotaModel();
         // MAndamos la Transacciòn ala Base de DAtos
         $mod->insert($unMensaje);
     
-        return view('estadomascota/mascotasaludo');
+        return view('estadomascota/mensajeenviado');
      
 }
 
@@ -222,6 +224,7 @@ public function editar01Formulario($id){
 
         if($mascota -> estadoMascotas == 1){
             $mascota -> estadoMascotas = 2;
+            $this->cerrarmensajes($id);
         }
         else {
             $mascota -> estadoMascotas = 1;
@@ -232,6 +235,16 @@ public function editar01Formulario($id){
         $mod->actualziar($mascota);
 
         return $this->index();
+
+    }
+
+    private function cerrarmensajes($id){
+        $mod = new mensajeMascotaModel();
+        $mensajes = $mod->mensajesActivos($id);
+        foreach($mensajes as $mensaje){
+            $mensaje->estado_id=2;
+            $mod->actualziar($mensaje);
+        }
 
     }
     

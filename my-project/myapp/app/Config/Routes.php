@@ -62,7 +62,7 @@ $routes->add('registroduenodos', 'registroDuenodosCrud::agregar01Dueno');
 $routes->add('registroplaca/(:num)', 'PlacasController::registroplaca/$1');
 $routes->add('mascotaperdida/(:num)', 'registroMascotaCrud::estadoMascotas/$1');
 $routes->add('enviarmensaje', 'registroMascotaCrud::enviarMensaje');
-
+$routes->add('registromascotaindex', 'registroMascotaCrud::index');
 
 // CRUD
 $routes->add('registromascota-editar/(:num)', 'registroMascotaCrud::editar01Formulario/$1');

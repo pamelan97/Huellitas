@@ -7,7 +7,7 @@ class mensajeMascotaModel extends Model
     protected $table = 'mensajeMascota';
     protected $primaryKey = 'mensaje_id';
     
-    protected $allowedFields = ['mensaje_id', 'mascota_id', 'nombre', 'telefono', 'mensaje'];
+    protected $allowedFields = ['mensaje_id', 'mascota_id', 'nombre', 'telefono', 'mensaje', 'estadoMensaje'];
 
     // Tipo de dato a devolver
     protected $returnType = 'App\Entities\mensajeMascotaEntity'; 
@@ -27,6 +27,8 @@ class mensajeMascotaModel extends Model
             'telefono' => $unMensaje->telefono,
 
             'mensaje' => $unMensaje->mensaje,
+
+            'estadoMensaje' => $unMensaje->estado_id,
         ]
         ;
 
@@ -43,17 +45,27 @@ class mensajeMascotaModel extends Model
 
 
      public function ultimomensaje ($id){
+        return $this->mensajesActivos($id)[0]; 
+     }
+
+     public function mensajesActivos ($id){
          
 
         $this->where('mascota_id',$id); 
+
+
+        $this->where('estadoMensaje', 1); 
+
+
         $this->orderBy('mensaje_id', 'DESC');
 
         $consulta = $this->findAll();
 
 
-        return $consulta[0]; 
+        return $consulta; 
     
 
      }
+
 
 }

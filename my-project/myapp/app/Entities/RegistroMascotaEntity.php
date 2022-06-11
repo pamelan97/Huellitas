@@ -47,4 +47,3 @@ class RegistroMascotaEntity extends Entity
 }
 
 ?>
-

@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?= $this->extend('formaStandar') ?>
-<?= $this->extend('/login/formaUsuario') ?>
 <?= $this->section('contenido') ?>
 
 
@@ -23,8 +22,8 @@
         <input type="phone" name="telefono" class="form-control" required/>
       </div>
       <div class="form-group">
-        <label>Deja un mensaje de como me encuentro:</label>
-        <input type="text" name="mensaje" class="form-control" required/>
+        <label class="form-label">Deja un mensaje de como me encuentro:</label>
+        <textarea type="text" name="mensaje" class="form-control" rows="3" required ></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary btn-sm">ENVIAR</button>

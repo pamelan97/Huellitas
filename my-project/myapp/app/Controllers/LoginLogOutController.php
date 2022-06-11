@@ -7,6 +7,7 @@ use App\Models\razaModel;
 use App\Models\tamanoModel;
 use App\Models\generoModel;
 use App\Models\registroMascotaModel;
+use App\Models\MensajeMascotaModel;
 //
 class LoginLogOutController extends BaseController
 {
@@ -16,11 +17,17 @@ public function index(){
     // Buscamos los conciertos
     session_start ();
     $mascotas = $mod->unicos($_SESSION['USR']->id);
-    // UN EJEMPLO PARA MAS ADELANTE
-    //$conciertos = $mod->soloConA();
-    
+
     // Ponemos en la 'data transiente' la data que queremos mostrar
-    $data['registros'] = $mascotas;
+    $mod2 = new mensajeMascotaModel();
+    
+    foreach($mascotas as $mascota){
+        $unMensaje = $mod2->ultimomensaje($mascota->id);
+
+        $datamascota['mascota']=$mascota;
+        $datamascota['mensaje']=$unMensaje;
+        $data['registros'][]=$datamascota;
+    }
     // Vamos a la vista ... pero con los datos!!!
     return view('login/index',$data);
 }
