@@ -1,2 +1,65 @@
 ERROR - 2022-06-10 23:33:58 --> Cannot delete or update a parent row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
 ERROR - 2022-06-10 23:34:02 --> Cannot delete or update a parent row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:36:31 --> Cannot delete or update a parent row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:36:56 --> Cannot delete or update a parent row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+CRITICAL - 2022-06-10 23:37:42 --> Argument 2 passed to view() must be of the type array, null given, called in /app/myapp/app/Controllers/registroMascotaCrud.php on line 40
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(40): view()
+#1 /app/myapp/app/Controllers/registroMascotaCrud.php(266): App\Controllers\registroMascotaCrud->index()
+#2 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->eliminar02Continuar()
+#3 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-06-10 23:43:39 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:45:53 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:47:20 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:48:43 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:49:06 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:49:23 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:49:40 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:49:54 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+ERROR - 2022-06-10 23:50:05 --> Cannot add or update a child row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
+CRITICAL - 2022-06-10 23:50:53 --> Argument 2 passed to view() must be of the type array, null given, called in /app/myapp/app/Controllers/registroMascotaCrud.php on line 40
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(40): view()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->index()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-10 23:50:56 --> Argument 2 passed to view() must be of the type array, null given, called in /app/myapp/app/Controllers/registroMascotaCrud.php on line 40
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(40): view()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->index()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-10 23:51:02 --> Argument 2 passed to view() must be of the type array, null given, called in /app/myapp/app/Controllers/registroMascotaCrud.php on line 40
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(40): view()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->index()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-10 23:51:10 --> Creating default object from empty value
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(230): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->estadoMascotas()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-10 23:51:12 --> Creating default object from empty value
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(230): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->estadoMascotas()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-06-10 23:51:48 --> syntax error, unexpected end of file
+#0 /app/myapp/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /app/myapp/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /app/myapp/app/Controllers/PlacasController.php(49): view()
+#3 /app/myapp/system/CodeIgniter.php(832): App\Controllers\PlacasController->registroplaca()
+#4 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

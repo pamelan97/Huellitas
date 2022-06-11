@@ -7,7 +7,7 @@
 
 <?php if($registro[0]->estadoMascotas==1){
 
-    ?> <?= ('Hola, mi nombre es ' . $registro[0]->nombreMascota . ' y estoy perdida, dejale tus datos a mi dueña/o para que me venga por mi, gracias :(')?>
+    ?> <strong class="text-center"><h3>  <?= ('Hola, mi nombre es ' . $registro[0]->nombreMascota . ' y estoy perdida, dejale tus datos a mi dueña/o para que venga por mi, gracias :(')?> </h3></strong>
     
     <div class="container mt-5">
   <h3 class="text-center">Mensaje al Dueña/o:</h3>
@@ -26,15 +26,14 @@
         <textarea type="text" name="mensaje" class="form-control" rows="3" required ></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-sm">ENVIAR</button>
-        <a href="<?php echo site_url('###');?>" class="btn btn-secondary btn-sm">Cancelar</a>
+        <button type="submit" class="btn btn-primary btn-lg">ENVIAR MENSAJE</button>
       </div>
     </form>
   </div>
     
     <?php 
 }else{
-    ?> Hola humano, no estoy perdida, no me robes mi dueña/o esta cerca >:( <?php
+    ?> <br><br><strong><h3>  Hola humano, no estoy perdida/o, no me robes mi dueña/o esta muy cerca y vigilandome >:(  </h3></strong> <?php
 }
 ?>
 </div>
