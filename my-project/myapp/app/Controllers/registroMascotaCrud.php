@@ -28,7 +28,7 @@ public function index(){
     $mod2 = new mensajeMascotaModel();
     
     foreach($mascotas as $mascota){
-        $unMensaje = $mod2->ultimomensaje($mascota->id);
+        $unMensaje = $mod2->mensajesActivos($mascota->id);
 
         $datamascota['mascota']=$mascota;
         $datamascota['mensaje']=$unMensaje;

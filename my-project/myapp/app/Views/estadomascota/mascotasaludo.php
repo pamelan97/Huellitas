@@ -33,10 +33,11 @@
     
     <?php 
 }else{
-    ?> <br><br><strong><h3>  Hola humano, no estoy perdida/o, no me robes mi dueña/o esta muy cerca y vigilandome >:(  </h3></strong> <?php
+    ?> <br><br><strong class="text-center"><h3>  Hola humano, no estoy perdida/o, no me robes mi dueña/o esta muy cerca y vigilandome >:(  </h3></strong> <?php
 }
 ?>
 </div>
 
 
 <?= $this->endSection() ?>
+
