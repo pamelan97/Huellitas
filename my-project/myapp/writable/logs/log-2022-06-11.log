@@ -1,0 +1,8 @@
+CRITICAL - 2022-06-11 12:22:03 --> Argument 2 passed to view() must be of the type array, null given, called in /app/myapp/app/Controllers/registroMascotaCrud.php on line 40
+#0 /app/myapp/app/Controllers/registroMascotaCrud.php(40): view()
+#1 /app/myapp/system/CodeIgniter.php(832): App\Controllers\registroMascotaCrud->index()
+#2 /app/myapp/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /app/myapp/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /app/myapp/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-06-11 12:26:01 --> Cannot delete or update a parent row: a foreign key constraint fails (`bitnami_myapp`.`mensajemascota`, CONSTRAINT `mensajeMascota_FK_1` FOREIGN KEY (`mascota_id`) REFERENCES `registroMascota` (`id`))
