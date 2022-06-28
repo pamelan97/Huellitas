@@ -42,9 +42,9 @@
              <td><?php echo $reg['mascota']->id; ?></td>
              <td><?php echo $reg['mascota']->nombreMascota; ?></td>
              <td><?php echo $reg['mascota']->fechaMascota; ?></td>
-             <td><?php echo $reg['mascota']->razaMascota; ?></td>
-             <td><?php echo $reg['mascota']->tamanoMascota; ?></td>
-             <td><?php echo $reg['mascota']->generoMascota; ?></td>
+             <td><?php echo $reg['raza']->descripcion; ?></td>
+             <td><?php echo $reg['tamano']->descripcion; ?></td>
+             <td><?php echo $reg['genero']->descripcion; ?></td>
              <td><?php echo $reg['mascota']->telefono1; ?></td>
              <td><?php echo $reg['mascota']->telefono2; ?></td>
              <td>

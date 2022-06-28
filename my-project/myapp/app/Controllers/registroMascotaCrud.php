@@ -26,9 +26,26 @@ public function index(){
     //$data['registros'] = $mascotas;
 
     $mod2 = new mensajeMascotaModel();
-    
+    $data['registros']=null;
     foreach($mascotas as $mascota){
         $unMensaje = $mod2->mensajesActivos($mascota->id);
+
+
+        
+    $modgenero = new generoModel();
+    $generos = $modgenero->find($mascota->generoMascota);
+    $datamascota['genero'] = $generos;
+
+
+    $modraza = new razaModel();
+    $razas = $modraza->find($mascota->razaMascota);
+    $datamascota['raza'] = $razas;
+
+
+
+    $modtamano = new tamanoModel();
+    $tamanos = $modtamano->find($mascota->tamanoMascota);
+    $datamascota['tamano'] = $tamanos;
 
         $datamascota['mascota']=$mascota;
         $datamascota['mensaje']=$unMensaje;
@@ -256,7 +273,19 @@ public function editar01Formulario($id){
     
     public function eliminar02Continuar(){
         // Recuperamos los datos desde el formulario (porque se enviaron por un POST y Request)
+
+        $mod2 = new mensajeMascotaModel();
+
+            $mensajes = $mod2->todosmensajes($this->request->getVar('id'));
+            foreach($mensajes as $mensaje){
+                $mod2->eliminar($mensaje); 
+
+            }
+    
+
+
        $unRegistro = new RegistroMascotaEntity();
+
          $unRegistro->id = $this->request->getVar('id');
          // Obtenemos la clase del Model que controla los conciertos
          $mod = new registroMascotaModel();

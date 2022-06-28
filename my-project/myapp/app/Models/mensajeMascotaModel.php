@@ -41,6 +41,20 @@ class mensajeMascotaModel extends Model
         return $this->findAll();
      }
 
+    
+     public function todosmensajes($id){
+
+        $this->where('mascota_id',$id); 
+
+        $this->orderBy('mensaje_id', 'DESC');
+
+        $consulta = $this->findAll();
+
+
+        return $consulta; 
+    
+     }
+
 
 
 
